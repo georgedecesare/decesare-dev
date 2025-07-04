@@ -8,6 +8,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-electric-blue: #00F0FF;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-mono);
 }
