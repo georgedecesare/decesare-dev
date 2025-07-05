@@ -9,8 +9,10 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-electric-blue: #00F0FF;
+  --color-gray-container: #262626;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-mono);
+  --font-terminal: var(--font-terminal);
 }
 
 @media (prefers-color-scheme: dark) {
