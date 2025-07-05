@@ -20,25 +20,27 @@ export default function Home() {
     <>
       <header
         id="navbar"
-        className="fixed top-0 z-50 flex flex-row gap-10 h-20 w-full px-10
-          items-center [&_a]:cursor-pointer"
+        className="fixed top-0 z-50 flex flex-row gap-10 h-20
+          w-[calc(100%-2.5rem)] px-10 items-center [&_a]:cursor-pointer
+          border-stone-700 border-4 rounded-4xl mx-5 mt-5 bg-background
+          invisible font-terminal"
       >
         <div id="logo" className="text-xl"></div>
-        <div id="navlinks">
-          <a>Link 1</a>
-          <a>Link 2</a>
-          <a>Link 3</a>
+        <div id="navlinks" className="flex flex-row gap-10 font-bold text-2xl">
+          <a>About</a>
+          <a>Projects</a>
+          <a>Contact</a>
         </div>
       </header>
       <main
-        className="flex min-h-screen flex-col items-center justify-center p-24
+        className="flex min-h-full flex-col items-center justify-center p-24
           smooth-content"
       >
         <div id="hero-logo" className="mt-[20vh] text-6xl">
           <div id="name-logo" className="text-inherit animate-popup opacity-0">
             <h1
               className="text-inherit font-bold font-mono flex flex-row
-                items-center justify-center pt-2"
+                items-center justify-center pt-2 visible!"
             >
               <div className={`animate-langle ${gradient} pb-2`}>&lt;</div>
               <div className="animate-name">George Decesare</div>
@@ -69,9 +71,73 @@ export default function Home() {
             </span>
           </div>
         </div>
-        <div className="inline-block mt-4 min-w-screen h-[150vh]"></div>
-        <div className="box aspect-square size-20 rounded-2xl bg-amber-500"></div>
-        <div className="inline-block mt-4 min-w-screen h-[150vh]"></div>
+        <div className="inline-block min-w-full min-h-[200px]"></div>
+        <section id="about-me" className="animate-section invisible">
+          <h1 className="text-5xl font-black font-mono">About Me</h1>
+          <hr className="mb-5" />
+          <p className="text-lg">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+            commodo vulputate enim, at facilisis ligula pellentesque nec. Sed
+            euismod, nunc vel tincidunt tincidunt, nunc nisl aliquet nunc,
+            euismod aliquam nunc nisl euismod nunc. Sed euismod, nunc vel
+            tincidunt tincidunt, nunc nisl aliquet nunc, euismod aliquam nunc
+            nisl euismod nunc. Sed euismod, nunc vel tincidunt tincidunt, nunc
+            nisl aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit. Praesent commodo vulputate enim, at facilisis ligula
+            pellentesque nec. Sed euismod, nunc vel tincidunt tincidunt, nunc
+            nisl aliquet nunc, euismod aliquam nunc nisl euismod nunc. Sed
+            euismod, nunc vel tincidunt tincidunt, nunc nisl aliquet nunc,
+            euismod aliquam nunc nisl euismod nunc. Sed euismod, nunc vel
+            tincidunt tincidunt, nunc nisl aliquet. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Praesent commodo vulputate enim, at
+            facilisis ligula pellentesque nec. Sed euismod, nunc vel tincidunt
+            tincidunt, nunc nisl aliquet nunc, euismod aliquam nunc nisl euismod
+            nunc. Sed euismod, nunc vel tincidunt tincidunt, nunc nisl aliquet
+            nunc, euismod aliquam nunc nisl euismod nunc. Sed euismod, nunc vel
+            tincidunt tincidunt, nunc nisl aliquet. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Praesent commodo vulputate enim, at
+            facilisis ligula pellentesque nec. Sed euismod, nunc vel tincidunt
+            tincidunt, nunc nisl aliquet nunc, euismod aliquam nunc nisl euismod
+            nunc. Sed euismod, nunc vel tincidunt tincidunt, nunc nisl aliquet
+            nunc, euismod aliquam nunc nisl euismod nunc. Sed euismod, nunc vel
+            tincidunt tincidunt, nunc nisl aliquet.
+          </p>
+        </section>{' '}
+        <br />
+        <br />
+        <br />
+        <section className="animate-section invisible">
+          <h1 className="text-5xl font-black font-mono">Projects</h1>
+          <hr className="mb-5" />
+          <p className="text-lg">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+            commodo vulputate enim, at facilisis ligula pellentesque nec. Sed
+            euismod, nunc vel tincidunt tincidunt, nunc nisl aliquet nunc,
+            euismod aliquam nunc nisl euismod nunc. Sed euismod, nunc vel
+            tincidunt tincidunt, nunc nisl aliquet nunc, euismod aliquam nunc
+            nisl euismod nunc. Sed euismod, nunc vel tincidunt tincidunt, nunc
+            nisl aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit. Praesent commodo vulputate enim, at facilisis ligula
+            pellentesque nec. Sed euismod, nunc vel tincidunt tincidunt, nunc
+            nisl aliquet nunc, euismod aliquam nunc nisl euismod nunc. Sed
+            euismod, nunc vel tincidunt tincidunt, nunc nisl aliquet nunc,
+            euismod aliquam nunc nisl euismod nunc. Sed euismod, nunc vel
+            tincidunt tincidunt, nunc nisl aliquet. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Praesent commodo vulputate enim, at
+            facilisis ligula pellentesque nec. Sed euismod, nunc vel tincidunt
+            tincidunt, nunc nisl aliquet nunc, euismod aliquam nunc nisl euismod
+            nunc. Sed euismod, nunc vel tincidunt tincidunt, nunc nisl aliquet
+            nunc, euismod aliquam nunc nisl euismod nunc. Sed euismod, nunc vel
+            tincidunt tincidunt, nunc nisl aliquet. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Praesent commodo vulputate enim, at
+            facilisis ligula pellentesque nec. Sed euismod, nunc vel tincidunt
+            tincidunt, nunc nisl aliquet nunc, euismod aliquam nunc nisl euismod
+            nunc. Sed euismod, nunc vel tincidunt tincidunt, nunc nisl aliquet
+            nunc, euismod aliquam nunc nisl euismod nunc. Sed euismod, nunc vel
+            tincidunt tincidunt, nunc nisl aliquet.
+          </p>
+        </section>
+        <div className="inline-block w-full min-h-[80vh]"></div>
       </main>
     </>
   );
