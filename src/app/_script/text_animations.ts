@@ -15,7 +15,7 @@ export default function animateText() {
   // ============================================================
   // TEXT SPLITTING & ELEMENT REFERENCES
   // ============================================================
-  let split = SplitText.create('.animate-name', {
+  const split = SplitText.create('.animate-name', {
     type: 'chars',
   });
   const center = Math.floor(split.chars.length / 2);
@@ -37,7 +37,7 @@ export default function animateText() {
   offset += langle.offsetWidth;
 
   // Position gradient for each character
-  split.chars.forEach((char, i) => {
+  split.chars.forEach((char) => {
     const elem = char as HTMLElement;
     elem.className = `${gradient} pb-2`;
     elem.style.backgroundSize = bgSize + 'px 100%';
@@ -61,7 +61,7 @@ export default function animateText() {
   // ============================================================
   // POPUP CONTAINER ANIMATION
   // ============================================================
-  tl.from('.animate-popup', {
+  tl.from('.animate-name', {
     delay: initialDelay,
     duration: 0.2,
     scale: 0,
@@ -151,16 +151,4 @@ export default function animateText() {
     autoAlpha: 1,
     ease: 'power1.out',
   });
-
-  // Bounce effect for the more icon
-  tl.from(
-    moreIcon,
-    {
-      delay: 0,
-      duration: 1,
-      y: -10,
-      ease: 'bounce.out',
-    },
-    '<'
-  );
 }
