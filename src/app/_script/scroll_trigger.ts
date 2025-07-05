@@ -22,9 +22,10 @@ export default function scrollTrigger() {
 function moveName() {
   const nameLogo = document.getElementById('name-logo')!;
   const newParent = document.getElementById('logo')!;
-  const navlinks = document.querySelectorAll('#navlink')!;
+  const navlinks = document.getElementById('navlinks')!;
   const footer = document.getElementById('footer')!;
-  const flipElements = [nameLogo, ...navlinks, footer];
+  const navbar = document.getElementById('navbar')!;
+  const flipElements = [navbar, navlinks, nameLogo, footer];
 
   const tl = gsap.timeline();
   tl.to(footer, {
@@ -42,8 +43,9 @@ function moveName() {
   newParent.appendChild(nameLogo);
 
   const flipAnimation = Flip.from(startState, {
-    duration: 1,
+    duration: 3,
     ease: 'power1.inOut',
+    nested: true,
     absolute: true,
     absoluteOnLeave: true,
   });
