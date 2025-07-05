@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    // For ESLint integration
+    "dbaeumer.vscode-eslint",
+
+    // For Prettier formatting
+    "esbenp.prettier-vscode",
+
+    // For Tailwind CSS autocompletion and linting
+    "bradlc.vscode-tailwindcss",
+  ]
+}
