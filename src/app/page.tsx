@@ -5,11 +5,13 @@ import 'material-symbols';
 import animateText from '@/app/_script/text_animations';
 import smoothScroll from '@/app/_script/smooth_scroll';
 import scrollTrigger from './_script/scroll_trigger';
+import setup from './_script/setup';
 
 export default function Home() {
   const gradient =
     'bg-gradient-to-r bg-clip-text text-transparent from-blue-600 via-purple-600 to-pink-600';
   useGSAP(() => {
+    setup();
     smoothScroll();
     scrollTrigger();
     animateText();
@@ -32,19 +34,17 @@ export default function Home() {
         className="flex min-h-screen flex-col items-center justify-center p-24
           smooth-content"
       >
-        <div
-          id="hero-logo"
-          className="animate-popup opacity-0 mt-[20vh] text-6xl"
-        >
-          <h1
-            id="name-logo"
-            className="text-inherit font-bold font-mono flex flex-row
-              items-center justify-center pt-2"
-          >
-            <div className={`animate-langle ${gradient} pb-2`}>&lt;</div>
-            <div className="animate-name">George Decesare</div>
-            <div className={`animate-rangle ${gradient} pb-2`}>/&gt;</div>
-          </h1>
+        <div id="hero-logo" className="mt-[20vh] text-6xl">
+          <div id="name-logo" className="text-inherit animate-popup opacity-0">
+            <h1
+              className="text-inherit font-bold font-mono flex flex-row
+                items-center justify-center pt-2"
+            >
+              <div className={`animate-langle ${gradient} pb-2`}>&lt;</div>
+              <div className="animate-name">George Decesare</div>
+              <div className={`animate-rangle ${gradient} pb-2`}>/&gt;</div>
+            </h1>
+          </div>
         </div>
         <div id="footer">
           <footer

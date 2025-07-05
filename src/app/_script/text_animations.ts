@@ -52,16 +52,13 @@ export default function animateText() {
   // ============================================================
   // ANIMATION TIMELINE SETUP
   // ============================================================
-  gsap.set('.animate-popup', {
-    autoAlpha: 1,
-  });
 
   const tl = gsap.timeline();
 
   // ============================================================
   // POPUP CONTAINER ANIMATION
   // ============================================================
-  tl.from('.animate-name', {
+  tl.from('.animate-popup', {
     delay: initialDelay,
     duration: 0.2,
     scale: 0,
