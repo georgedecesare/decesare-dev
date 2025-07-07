@@ -129,9 +129,8 @@ export default function animateText() {
   // Animate each character with random delay for typewriter effect
   typewriter.chars.forEach((char) => {
     tl.to(char, {
-      delay: Math.random() / 20 + 0.02,
+      delay: Math.random() / 20 + 0.01,
       autoAlpha: 1,
-      animation: 'text',
       duration: 0,
     });
   });
