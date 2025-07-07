@@ -31,7 +31,6 @@ export default function Navlink({ children }: { children?: React.ReactNode }) {
       gsap.set(menuRef.current, { display: 'block' });
       gsap.to(menuRef.current, {
         duration: 0.3,
-        autoAlpha: 1, // Fades in and sets visibility to visible
         y: 0,
         ease: 'bounce.out',
       });
@@ -39,11 +38,14 @@ export default function Navlink({ children }: { children?: React.ReactNode }) {
       // Animate Out
       gsap.to(menuRef.current, {
         duration: 0.3,
-        autoAlpha: 0, // Fades out and sets visibility to hidden
         y: -20,
+        clipPath: 'inset(0% 0% 100% 0%)',
         ease: 'power2.inOut',
         onComplete: () => {
-          gsap.set(menuRef.current, { display: 'none' });
+          gsap.set(menuRef.current, {
+            display: 'none',
+            clipPath: 'inset(0% 0% 0% 0%)',
+          });
         },
       });
     }
@@ -61,8 +63,8 @@ export default function Navlink({ children }: { children?: React.ReactNode }) {
     >
       <div
         onClick={toggleVisibility}
-        className="border-3 border-stone-500 p-3 pl-5 flex flex-row items-center
-          relative z-50 bg-background"
+        className="p-3 pl-5 flex flex-row items-center relative z-50 bg-nav
+          rounded-xs"
       >
         {children}
         <span className="material-symbols-outlined text-3xl ml-2 select-none">
@@ -71,8 +73,8 @@ export default function Navlink({ children }: { children?: React.ReactNode }) {
       </div>
       <div
         ref={menuRef}
-        className="absolute border-3 mt-[-3] top-full left-0 right-0
-          border-stone-500 z-40 bg-background px-5 invisible"
+        className="absolute mt-[-3] top-full left-0 right-0 z-40 bg-nav px-5
+          hidden rounded-xs"
       >
         Menu item
         <br />
