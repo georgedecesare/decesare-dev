@@ -1,7 +1,7 @@
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Flip } from 'gsap/Flip';
 import gsap from 'gsap';
-import { getSectionAnimations } from './text_animations';
+import { getSectionAnimations } from './draw_svg';
 
 export default function scrollTrigger() {
   gsap.registerPlugin(ScrollTrigger, Flip);
@@ -43,8 +43,8 @@ function nameNavbar() {
   newParent.appendChild(nameLogo);
 
   const nameAnimation = Flip.from(startState, {
-    duration: 2,
-    ease: 'power1.inOut',
+    duration: 0.5,
+    ease: 'power1.out',
     nested: true,
     absolute: true,
     absoluteOnLeave: true,
