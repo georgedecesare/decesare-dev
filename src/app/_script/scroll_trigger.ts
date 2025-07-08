@@ -42,6 +42,9 @@ const recomputeScrollAnimation = () => {
   gsap.set(navbar, {
     autoAlpha: navbarIn ? 1 : 0,
   });
+  gsap.set(nameLogo, {
+    autoAlpha: 1,
+  });
   // Reset the DOM
   const logo = document.getElementById('name-logo')!;
   document.getElementById('hero-logo')!.appendChild(logo);
@@ -89,7 +92,6 @@ function nameNavbar() {
     end: '+=150',
     scrub: true,
     animation: tl,
-    markers: true,
     onLeave: () => {
       // Animate navbar in
       if (navbarIn) return;
