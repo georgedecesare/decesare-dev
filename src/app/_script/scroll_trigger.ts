@@ -14,6 +14,7 @@ export default function scrollTrigger() {
       trigger: cf.section,
       start: 'top 40%',
       scrub: false,
+      markers: true,
       animation: cf.animation,
     });
   });
@@ -62,12 +63,6 @@ function nameNavbar() {
   const flipElements = [navbar, navlinks, nameLogo, footer];
 
   const tl = gsap.timeline();
-  tl.to(footer, {
-    duration: 0.1,
-    autoAlpha: 0,
-    y: 50,
-    ease: 'power1.inOut',
-  });
 
   const startState = Flip.getState(flipElements, {
     props: 'fontSize, lineHeight',
@@ -84,12 +79,24 @@ function nameNavbar() {
     absoluteOnLeave: true,
   });
 
-  tl.add(nameAnimation, '<');
+  tl.add(nameAnimation);
+  tl.to(
+    footer,
+    {
+      delay: 0.1,
+      duration: 0.3,
+      autoAlpha: 0,
+      y: 50,
+      ease: 'power1.inOut',
+    },
+    '<'
+  );
 
   return ScrollTrigger.create({
-    trigger: 'body',
+    trigger: document.body,
     start: 'top top',
-    end: '+=150',
+    end: `+=${nameLogo.offsetHeight + footer.offsetHeight}`,
+    markers: true,
     scrub: true,
     animation: tl,
     onLeave: () => {
