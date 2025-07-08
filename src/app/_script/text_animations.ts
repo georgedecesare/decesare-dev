@@ -164,6 +164,18 @@ const getSectionAnimations = () => {
     const lines = SplitText.create(body, {
       type: 'lines',
     });
+    tl.fromTo(
+      section,
+      {
+        scale: 0.9,
+      },
+      {
+        duration: 0.2,
+        autoAlpha: 1,
+        scale: 1,
+        ease: 'power1.out',
+      }
+    );
     tl.from(title, {
       duration: 0.5,
       autoAlpha: 0,

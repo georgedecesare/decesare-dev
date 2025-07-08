@@ -38,3 +38,13 @@ body {
 * {
   scrollbar-gutter: stable;
 }
+
+section {
+  visibility: hidden;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  background-color: rgb(0, 58, 73);
+  border: 1px solid slategray;
+  border-radius: 10px;
+  padding: 2rem;
+}

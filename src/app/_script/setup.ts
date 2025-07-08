@@ -5,7 +5,4 @@ export default function setup() {
   gsap.set('.animate-popup', {
     autoAlpha: 1,
   });
-  gsap.set('.animate-section', {
-    autoAlpha: 1,
-  });
 }
