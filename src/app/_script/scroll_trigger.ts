@@ -4,6 +4,7 @@ import gsap from 'gsap';
 import { getSectionAnimations } from './draw_svg';
 
 let trigger: ScrollTrigger | undefined;
+let navbarIn = false;
 
 export default function scrollTrigger() {
   gsap.registerPlugin(ScrollTrigger, Flip);
@@ -22,7 +23,28 @@ export default function scrollTrigger() {
 
 const recomputeScrollAnimation = () => {
   // Gets called on window resize
-  if (trigger) trigger.kill();
+  console.log('Recomputing scroll animations');
+  if (trigger) {
+    trigger.animation?.kill();
+    trigger.kill();
+  }
+  // Reset inline styles
+  const nameLogo = document.getElementById('name-logo')!;
+  const navlinks = document.getElementById('navlinks')!;
+  const footer = document.getElementById('footer')!;
+  const navbar = document.getElementById('navbar')!;
+  const flipElements = [navbar, navlinks, nameLogo, footer];
+  flipElements.forEach((el) => {
+    gsap.set(el, {
+      clearProps: 'all',
+    });
+  });
+  gsap.set(navbar, {
+    autoAlpha: navbarIn ? 1 : 0,
+  });
+  // Reset the DOM
+  const logo = document.getElementById('name-logo')!;
+  document.getElementById('hero-logo')!.appendChild(logo);
   trigger = nameNavbar();
 };
 
@@ -35,7 +57,6 @@ function nameNavbar() {
   const footer = document.getElementById('footer')!;
   const navbar = document.getElementById('navbar')!;
   const flipElements = [navbar, navlinks, nameLogo, footer];
-  let navbarIn = false;
 
   const tl = gsap.timeline();
   tl.to(footer, {
@@ -68,6 +89,7 @@ function nameNavbar() {
     end: '+=150',
     scrub: true,
     animation: tl,
+    markers: true,
     onLeave: () => {
       // Animate navbar in
       if (navbarIn) return;
