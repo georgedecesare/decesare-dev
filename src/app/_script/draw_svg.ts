@@ -33,16 +33,23 @@ function getSectionAnimations() {
       });
 
       // Then animate the title text
+      const titleSplit = SplitText.create(title, {
+        type: 'chars',
+        smartWrap: true,
+      });
       animation.from(
-        SplitText.create(title, { type: 'chars, words' }).chars,
+        titleSplit.chars,
         {
           delay: 0.2,
           y: 15,
           x: -10,
-          opacity: 0,
+          autoAlpha: 0,
           duration: 0.5,
           stagger: 0.2,
           ease: 'power1.out',
+          onComplete: () => {
+            titleSplit.revert();
+          },
         },
         '<'
       );
