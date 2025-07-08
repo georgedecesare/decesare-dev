@@ -10,6 +10,7 @@ import scrollTrigger, {
 import setup from './_script/setup';
 import Section from './section';
 import { useEffect } from 'react';
+import Link from 'next/link';
 
 export default function Home() {
   const gradient =
@@ -70,15 +71,23 @@ export default function Home() {
       </div>
       <div className="inline-block min-w-full min-h-[200px]"></div>
       <Section title="About Me">
-        I&apos;m George, a third year computing student at Imperial College
-        London. Welcome to my personal website! This is a lot of text describing
-        the sort of person I am. I like programming, I like computers, and I
-        like to learn new things. I&apos;m currently learning about web
-        development, and this website is a project I&apos;m working on to
-        practice my skills. I&apos;m also interested in machine learning, and
-        I&apos;m currently learning about it in my spare time. I&apos;m always
-        looking for new challenges and opportunities to learn, so if you have
-        any interesting projects or ideas, feel free to reach out to me!
+        Hi &mdash; I&apos;m George. I study{' '}
+        <Link
+          href="https://www.imperial.ac.uk/computing/"
+          className="font-bold"
+        >
+          Computing
+        </Link>{' '}
+        at Imperial College London. I&apos;m an aspiring software engineer with
+        a love for beautiful code and unique solutions.
+        <br />
+        At the moment I&apos;m enjoying dabbling in full-stack web development
+        &mdash; for example this website. You can read more about it below.
+        <br />I also enjoy the intersection of mathematics with computing,
+        particularly in the fields of machine learning and computer graphics.
+        <br />I also play the violin and piano at grade 8 level, and I love to
+        walk/hike. Also <code>vim &gt; emacs</code>.
+        <br />
       </Section>
       <div className="inline-block w-full min-h-[80vh]"></div>
     </main>
