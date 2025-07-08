@@ -37,12 +37,14 @@ function moveName() {
   const startState = Flip.getState(flipElements, {
     props: 'fontSize, lineHeight',
   });
+  gsap.set([nameLogo, footer], { whiteSpace: 'nowrap' });
 
   newParent.appendChild(nameLogo);
 
   const flipAnimation = Flip.from(startState, {
     duration: 1,
     ease: 'power1.inOut',
+    absolute: true,
     absoluteOnLeave: true,
   });
 
