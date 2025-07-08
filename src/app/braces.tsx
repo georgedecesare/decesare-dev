@@ -1,6 +1,7 @@
 function LeftBraceIcon() {
   return (
     <svg
+      className="py-[1px]"
       width="208"
       height="449.002"
       viewBox="0 0 208 449.002"
@@ -28,6 +29,7 @@ function LeftBraceIcon() {
 function RightBraceIcon() {
   return (
     <svg
+      className="py-[1px]"
       width="208"
       height="449.002"
       viewBox="0 0 208 449.002"
