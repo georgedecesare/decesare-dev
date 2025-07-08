@@ -31,20 +31,6 @@ export default function Home() {
 
   return (
     <>
-      <header
-        id="navbar"
-        className="fixed top-0 z-40 flex flex-row gap-10 h-15
-          w-[calc(100%-2.5rem)] pr-10 items-center mx-5 mt-5 invisible
-          font-terminal rounded-xs bg-nav shadow-lg border-1 border-stone-700"
-      >
-        <div id="logo" className="ml-10 text-xl"></div>
-        <div id="navlinks" className="flex flex-row gap-10">
-          <Navlink>Home</Navlink>
-          <Navlink>About Me</Navlink>
-          <Navlink>Projects</Navlink>
-          <Navlink>Contact</Navlink>
-        </div>
-      </header>
       <main
         className="flex min-h-full flex-col items-center justify-center py-24
           smooth-content"
