@@ -9,5 +9,8 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "files.eol": "\n",
-  "editor.tabSize": 2
+  "editor.tabSize": 2,
+  "files.watcherExclude": {
+    "**/target": true
+  }
 }

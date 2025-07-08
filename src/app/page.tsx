@@ -7,6 +7,7 @@ import smoothScroll from '@/app/_script/smooth_scroll';
 import scrollTrigger from './_script/scroll_trigger';
 import setup from './_script/setup';
 import Navlink from './navlink';
+import { LeftBraceIcon, RightBraceIcon } from './braces';
 
 export default function Home() {
   const gradient =
@@ -34,7 +35,7 @@ export default function Home() {
         </div>
       </header>
       <main
-        className="flex min-h-full flex-col items-center justify-center p-24
+        className="flex min-h-full flex-col items-center justify-center py-24
           smooth-content"
       >
         <div id="hero-logo" className="mt-[20vh] text-6xl">
@@ -73,70 +74,24 @@ export default function Home() {
           </div>
         </div>
         <div className="inline-block min-w-full min-h-[200px]"></div>
-        <section id="about-me" className="animate-section invisible">
-          <h1 className="text-5xl font-black font-mono">About Me</h1>
-          <hr className="mb-5" />
-          <p className="text-lg">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-            commodo vulputate enim, at facilisis ligula pellentesque nec. Sed
-            euismod, nunc vel tincidunt tincidunt, nunc nisl aliquet nunc,
-            euismod aliquam nunc nisl euismod nunc. Sed euismod, nunc vel
-            tincidunt tincidunt, nunc nisl aliquet nunc, euismod aliquam nunc
-            nisl euismod nunc. Sed euismod, nunc vel tincidunt tincidunt, nunc
-            nisl aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit. Praesent commodo vulputate enim, at facilisis ligula
-            pellentesque nec. Sed euismod, nunc vel tincidunt tincidunt, nunc
-            nisl aliquet nunc, euismod aliquam nunc nisl euismod nunc. Sed
-            euismod, nunc vel tincidunt tincidunt, nunc nisl aliquet nunc,
-            euismod aliquam nunc nisl euismod nunc. Sed euismod, nunc vel
-            tincidunt tincidunt, nunc nisl aliquet. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Praesent commodo vulputate enim, at
-            facilisis ligula pellentesque nec. Sed euismod, nunc vel tincidunt
-            tincidunt, nunc nisl aliquet nunc, euismod aliquam nunc nisl euismod
-            nunc. Sed euismod, nunc vel tincidunt tincidunt, nunc nisl aliquet
-            nunc, euismod aliquam nunc nisl euismod nunc. Sed euismod, nunc vel
-            tincidunt tincidunt, nunc nisl aliquet. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Praesent commodo vulputate enim, at
-            facilisis ligula pellentesque nec. Sed euismod, nunc vel tincidunt
-            tincidunt, nunc nisl aliquet nunc, euismod aliquam nunc nisl euismod
-            nunc. Sed euismod, nunc vel tincidunt tincidunt, nunc nisl aliquet
-            nunc, euismod aliquam nunc nisl euismod nunc. Sed euismod, nunc vel
-            tincidunt tincidunt, nunc nisl aliquet.
-          </p>
-        </section>{' '}
-        <br />
-        <br />
-        <br />
-        <section className="animate-section invisible">
-          <h1 className="text-5xl font-black font-mono">Projects</h1>
-          <hr className="mb-5" />
-          <p className="text-lg">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-            commodo vulputate enim, at facilisis ligula pellentesque nec. Sed
-            euismod, nunc vel tincidunt tincidunt, nunc nisl aliquet nunc,
-            euismod aliquam nunc nisl euismod nunc. Sed euismod, nunc vel
-            tincidunt tincidunt, nunc nisl aliquet nunc, euismod aliquam nunc
-            nisl euismod nunc. Sed euismod, nunc vel tincidunt tincidunt, nunc
-            nisl aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit. Praesent commodo vulputate enim, at facilisis ligula
-            pellentesque nec. Sed euismod, nunc vel tincidunt tincidunt, nunc
-            nisl aliquet nunc, euismod aliquam nunc nisl euismod nunc. Sed
-            euismod, nunc vel tincidunt tincidunt, nunc nisl aliquet nunc,
-            euismod aliquam nunc nisl euismod nunc. Sed euismod, nunc vel
-            tincidunt tincidunt, nunc nisl aliquet. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Praesent commodo vulputate enim, at
-            facilisis ligula pellentesque nec. Sed euismod, nunc vel tincidunt
-            tincidunt, nunc nisl aliquet nunc, euismod aliquam nunc nisl euismod
-            nunc. Sed euismod, nunc vel tincidunt tincidunt, nunc nisl aliquet
-            nunc, euismod aliquam nunc nisl euismod nunc. Sed euismod, nunc vel
-            tincidunt tincidunt, nunc nisl aliquet. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Praesent commodo vulputate enim, at
-            facilisis ligula pellentesque nec. Sed euismod, nunc vel tincidunt
-            tincidunt, nunc nisl aliquet nunc, euismod aliquam nunc nisl euismod
-            nunc. Sed euismod, nunc vel tincidunt tincidunt, nunc nisl aliquet
-            nunc, euismod aliquam nunc nisl euismod nunc. Sed euismod, nunc vel
-            tincidunt tincidunt, nunc nisl aliquet.
-          </p>
+        <section className="flex flex-row w-full px-10 invisible">
+          <div className="h-full py-1 pb-20">
+            <LeftBraceIcon />
+          </div>
+          <div className="flex flex-col font-terminal text-8xl justify-center">
+            <h1 className="text-end">
+              About <br /> Me
+            </h1>
+          </div>
+          <div className="flex items-center flex-1/3">
+            <p className="pl-10 font-mono text-lg w-full">
+              I&apos;m George, a third year computing student at Imperial
+              College London. Welcome to my personal website!
+            </p>
+          </div>
+          <div className="h-full py-1 pt-20">
+            <RightBraceIcon />
+          </div>
         </section>
         <div className="inline-block w-full min-h-[80vh]"></div>
       </main>
