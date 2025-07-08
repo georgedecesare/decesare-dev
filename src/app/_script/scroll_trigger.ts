@@ -14,7 +14,6 @@ export default function scrollTrigger() {
       trigger: cf.section,
       start: 'top 40%',
       scrub: false,
-      markers: true,
       animation: cf.animation,
     });
   });
@@ -96,7 +95,6 @@ function nameNavbar() {
     trigger: document.body,
     start: 'top top',
     end: `+=${nameLogo.offsetHeight + footer.offsetHeight}`,
-    markers: true,
     scrub: true,
     animation: tl,
     onLeave: () => {
