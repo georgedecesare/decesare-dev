@@ -9,7 +9,7 @@ export default function Section({
   title,
 }: React.PropsWithChildren<SectionProps>) {
   return (
-    <section className="px-10 flex flex-row w-full xl:w-[70%] invisible">
+    <section className="px-10 flex flex-row w-full xl:max-w-[80%] invisible">
       <div className="h-full py-1 pb-20">
         <LeftBraceIcon />
       </div>
