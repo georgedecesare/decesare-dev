@@ -48,7 +48,7 @@ export default function Home() {
             className="mt-4 text-center font-terminal text-3xl font-bold
               footer-typewriter opacity-0"
           >
-            Computing student at Imperial College London.
+            Computing student at Imperial College London
           </footer>
           <div className="mt-4 flex flex-col items-center justify-center">
             <span
