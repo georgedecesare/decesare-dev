@@ -17,13 +17,16 @@ export default function Home() {
   return (
     <>
       <header
+        id="navbar"
         className="fixed top-0 z-50 flex flex-row gap-10 h-20 w-full px-10
           items-center [&_a]:cursor-pointer"
       >
         <div id="logo" className="text-xl"></div>
-        <a id="navlink">Link 1</a>
-        <a id="navlink">Link 2</a>
-        <a id="navlink">Link 3</a>
+        <div id="navlinks">
+          <a>Link 1</a>
+          <a>Link 2</a>
+          <a>Link 3</a>
+        </div>
       </header>
       <main
         className="flex min-h-screen flex-col items-center justify-center p-24
