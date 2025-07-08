@@ -4,20 +4,31 @@ import { useGSAP } from '@gsap/react';
 import 'material-symbols';
 import animateText from '@/app/_script/text_animations';
 import smoothScroll from '@/app/_script/smooth_scroll';
-import scrollTrigger from './_script/scroll_trigger';
+import scrollTrigger, {
+  recomputeScrollAnimation,
+} from './_script/scroll_trigger';
 import setup from './_script/setup';
 import Navlink from './navlink';
 import Section from './section';
+import { useEffect } from 'react';
 
 export default function Home() {
   const gradient =
     'bg-gradient-to-r bg-clip-text text-transparent from-blue-600 via-purple-600 to-pink-600';
+
   useGSAP(() => {
     setup();
     smoothScroll();
     scrollTrigger();
     animateText();
   });
+  useEffect(() => {
+    window.addEventListener('resize', recomputeScrollAnimation);
+    return () => {
+      window.removeEventListener('resize', recomputeScrollAnimation);
+    };
+  });
+
   return (
     <>
       <header

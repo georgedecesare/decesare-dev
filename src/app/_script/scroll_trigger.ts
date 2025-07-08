@@ -3,6 +3,8 @@ import { Flip } from 'gsap/Flip';
 import gsap from 'gsap';
 import { getSectionAnimations } from './draw_svg';
 
+let trigger: ScrollTrigger | undefined;
+
 export default function scrollTrigger() {
   gsap.registerPlugin(ScrollTrigger, Flip);
 
@@ -15,8 +17,16 @@ export default function scrollTrigger() {
     });
   });
 
-  nameNavbar();
+  trigger = nameNavbar(); // initialise
 }
+
+const recomputeScrollAnimation = () => {
+  // Gets called on window resize
+  if (trigger) trigger.kill();
+  trigger = nameNavbar();
+};
+
+export { recomputeScrollAnimation };
 
 function nameNavbar() {
   const nameLogo = document.getElementById('name-logo')!;
@@ -52,13 +62,14 @@ function nameNavbar() {
 
   tl.add(nameAnimation, '<');
 
-  ScrollTrigger.create({
+  return ScrollTrigger.create({
     trigger: 'body',
     start: 'top top',
     end: '+=150',
     scrub: true,
-    animation: tl, // Tell ScrollTrigger to control our paused animation
+    animation: tl,
     onLeave: () => {
+      // Animate navbar in
       if (navbarIn) return;
       navbarIn = true;
       gsap.set(navbar, {
