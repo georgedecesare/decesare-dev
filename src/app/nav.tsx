@@ -11,8 +11,11 @@ export default function Nav() {
     >
       <div id="logo" className="ml-10 text-xl"></div>
       <div id="navlinks" className="flex flex-row gap-10">
-        <Navlink title="Home"></Navlink>
-        <Navlink title="About"></Navlink>
+        <Navlink title="About">
+          CV/Resumé
+          <br />
+          About this website
+        </Navlink>
         <Navlink title="Projects"></Navlink>
         <Navlink title="Contact">
           <Link href="https://github.com/georgedecesare">GitHub</Link>

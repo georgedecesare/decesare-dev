@@ -80,7 +80,7 @@ export default function Navlink({
         ref={menuRef}
         className="absolute mt-[-3] top-full left-0 right-0 z-40 bg-nav px-5
           hidden rounded-xs border-l border-r border-b border-stone-700 text-xl
-          pb-2"
+          pb-2 w-fit"
       >
         {children}
       </div>
