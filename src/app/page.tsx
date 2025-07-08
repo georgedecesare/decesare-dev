@@ -22,9 +22,8 @@ export default function Home() {
       <header
         id="navbar"
         className="fixed top-0 z-40 flex flex-row gap-10 h-20
-          w-[calc(100%-2.5rem)] px-10 items-center border-3 mx-5 mt-5
-          bg-background/70 backdrop-blur-sm invisible font-terminal
-          border-stone-500"
+          w-[calc(100%-2.5rem)] px-10 items-center mx-5 mt-5 invisible
+          font-terminal rounded-xs bg-nav shadow-lg"
       >
         <div id="logo" className="text-xl"></div>
         <div id="navlinks" className="flex flex-row gap-10">
