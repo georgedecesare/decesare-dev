@@ -7,7 +7,7 @@ import smoothScroll from '@/app/_script/smooth_scroll';
 import scrollTrigger from './_script/scroll_trigger';
 import setup from './_script/setup';
 import Navlink from './navlink';
-import { LeftBraceIcon, RightBraceIcon } from './braces';
+import Section from './section';
 
 export default function Home() {
   const gradient =
@@ -22,7 +22,7 @@ export default function Home() {
     <>
       <header
         id="navbar"
-        className="fixed top-0 z-40 flex flex-row gap-10 h-20
+        className="fixed top-0 z-40 flex flex-row gap-10 h-15
           w-[calc(100%-2.5rem)] pr-10 items-center mx-5 mt-5 invisible
           font-terminal rounded-xs bg-nav shadow-lg border-1 border-stone-700"
       >
@@ -74,25 +74,18 @@ export default function Home() {
           </div>
         </div>
         <div className="inline-block min-w-full min-h-[200px]"></div>
-        <section className="flex flex-row w-full px-10 invisible">
-          <div className="h-full py-1 pb-20">
-            <LeftBraceIcon />
-          </div>
-          <div className="flex flex-col font-terminal text-8xl justify-center">
-            <h1 className="text-end">
-              About <br /> Me
-            </h1>
-          </div>
-          <div className="flex items-center flex-1/3">
-            <p className="pl-10 font-mono text-lg w-full">
-              I&apos;m George, a third year computing student at Imperial
-              College London. Welcome to my personal website!
-            </p>
-          </div>
-          <div className="h-full py-1 pt-20">
-            <RightBraceIcon />
-          </div>
-        </section>
+        <Section title="About Me">
+          I&apos;m George, a third year computing student at Imperial College
+          London. Welcome to my personal website! This is a lot of text
+          describing the sort of person I am. I like programming, I like
+          computers, and I like to learn new things. I&apos;m currently learning
+          about web development, and this website is a project I&apos;m working
+          on to practice my skills. I&apos;m also interested in machine
+          learning, and I&apos;m currently learning about it in my spare time.
+          I&apos;m always looking for new challenges and opportunities to learn,
+          so if you have any interesting projects or ideas, feel free to reach
+          out to me!
+        </Section>
         <div className="inline-block w-full min-h-[80vh]"></div>
       </main>
     </>
