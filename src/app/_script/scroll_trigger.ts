@@ -19,14 +19,13 @@ export default function scrollTrigger() {
     });
   });
 
-  gsap.set('.projects', {
-    x: window.innerWidth,
-    autoAlpha: 1,
-  });
-
   trigger = nameNavbar(); // initialise
 
   // Project cards
+  gsap.set('.projects', {
+    x: document.body.clientWidth,
+    autoAlpha: 1,
+  });
   gsap.to('.projects', {
     x: -document.querySelector('.projects')!.clientWidth,
     ease: 'none', // <-- IMPORTANT!

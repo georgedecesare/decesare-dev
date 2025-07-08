@@ -24,8 +24,8 @@ export default function Section({
       </div>
       <div className="flex items-center flex-2/3 3xl:flex-1/3">
         <p
-          className="pl-10 font-mono text-sm lg:text-md xl:text-lg w-full pt-20
-            font-light leading-relaxed"
+          className="pl-10 font-mono text-sm xl:text-md w-full pt-20 font-light
+            leading-relaxed"
         >
           {children}
         </p>
