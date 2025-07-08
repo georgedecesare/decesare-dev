@@ -136,6 +136,10 @@ export default function animateText() {
     });
   });
 
+  tl.set(document.body, {
+    overflowY: 'auto',
+  });
+
   // ============================================================
   // MORE ICON ANIMATION
   // ============================================================
@@ -149,3 +153,42 @@ export default function animateText() {
     ease: 'power1.out',
   });
 }
+
+const getSectionAnimations = () => {
+  const sections = Array.from(document.querySelectorAll('.animate-section'));
+  return sections.map((section) => {
+    const tl = gsap.timeline();
+    const title = section.querySelector('h1');
+    const rule = section.querySelector('hr');
+    const body = section.querySelector('p');
+    const lines = SplitText.create(body, {
+      type: 'lines',
+    });
+    tl.from(title, {
+      duration: 0.5,
+      autoAlpha: 0,
+      y: -20,
+      ease: 'power1.out',
+    });
+    tl.from(
+      rule,
+      {
+        duration: 0.5,
+        autoAlpha: 0,
+        y: -20,
+        ease: 'power1.out',
+      },
+      '<'
+    );
+    tl.from(lines.lines, {
+      delay: 0,
+      duration: 2,
+      autoAlpha: 0,
+      ease: 'power1.out',
+      stagger: 0.1,
+    });
+    return { section: section, animation: tl };
+  });
+};
+
+export { getSectionAnimations };
