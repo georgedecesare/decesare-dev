@@ -34,7 +34,7 @@ function getSectionAnimations() {
 
       // Then animate the title text
       animation.from(
-        SplitText.create(title, { type: 'chars' }).chars,
+        SplitText.create(title, { type: 'chars, words' }).chars,
         {
           delay: 0.2,
           y: 15,
@@ -50,12 +50,6 @@ function getSectionAnimations() {
       const contentLines = SplitText.create(content, {
         type: 'lines',
       });
-
-      // And now the content
-      // Ensure SplitText splits by lines by setting white-space to 'pre-line'
-      if (content) {
-        (content as HTMLElement).style.whiteSpace = 'pre-line';
-      }
       animation.from(
         contentLines.lines,
         {
@@ -65,6 +59,9 @@ function getSectionAnimations() {
           duration: 1,
           stagger: 0.1,
           ease: 'power1.out',
+          onComplete: () => {
+            contentLines.revert();
+          },
         },
         '<'
       );
