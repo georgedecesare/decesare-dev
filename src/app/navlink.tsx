@@ -3,7 +3,13 @@
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 
-export default function Navlink({ children }: { children?: React.ReactNode }) {
+export default function Navlink({
+  children,
+  title,
+}: {
+  children?: React.ReactNode;
+  title: string;
+}) {
   const [visible, setVisible] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -65,7 +71,7 @@ export default function Navlink({ children }: { children?: React.ReactNode }) {
         className="cursor-pointer p-3 pl-5 flex flex-row items-center relative
           z-50 rounded-xs"
       >
-        {children}
+        {title}
         <span className="material-symbols-outlined text-3xl ml-2 select-none">
           arrow_drop_down
         </span>
@@ -76,10 +82,7 @@ export default function Navlink({ children }: { children?: React.ReactNode }) {
           hidden rounded-xs border-l border-r border-b border-stone-700 text-xl
           pb-2"
       >
-        Menu item
-        <br />
-        Another
-        <br />
+        {children}
       </div>
     </div>
   );

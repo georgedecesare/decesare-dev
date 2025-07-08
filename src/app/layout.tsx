@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono, IBM_Plex_Mono, VT323 } from 'next/font/google';
 import './globals.css';
-import Navlink from './navlink';
+import Nav from './nav';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -46,20 +46,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${mono.variable}
           ${terminal.variable} antialiased`}
       >
-        <header
-          id="navbar"
-          className="fixed top-0 z-40 flex flex-row gap-10 h-15
-            w-[calc(100%-2.5rem)] pr-10 items-center mx-5 mt-5 invisible
-            font-terminal rounded-xs bg-nav shadow-lg border-1 border-stone-700"
-        >
-          <div id="logo" className="ml-10 text-xl"></div>
-          <div id="navlinks" className="flex flex-row gap-10">
-            <Navlink>Home</Navlink>
-            <Navlink>About Me</Navlink>
-            <Navlink>Projects</Navlink>
-            <Navlink>Contact</Navlink>
-          </div>
-        </header>
+        <Nav />
         {children}
       </body>
     </html>
