@@ -11,6 +11,7 @@ import setup from './_script/setup';
 import Section from './section';
 import { useEffect } from 'react';
 import Link from 'next/link';
+import Card from './card';
 
 export default function Home() {
   const gradient =
@@ -32,7 +33,7 @@ export default function Home() {
   return (
     <main
       className="flex min-h-full flex-col items-center justify-center py-24
-        smooth-content"
+        relative main"
     >
       <div id="hero-logo" className="mt-[20vh] text-6xl">
         <div id="name-logo" className="text-inherit animate-popup opacity-0">
@@ -89,6 +90,39 @@ export default function Home() {
         walk/hike. Also <code>vim &gt; emacs</code>.
         <br />
       </Section>
+      <div
+        className="flex flex-row gap-10 pl-10 projects items-start justify-start
+          aspect-square mt-20 w-min mr-auto"
+      >
+        <Card>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+          consectetur, erat in efficitur facilisis, enim ligula facilisis enim,
+          nec tincidunt enim erat in enim. Sed consectetur, erat in efficitur
+          facilisis, enim ligula facilisis enim, nec tincidunt enim erat in
+          enim.
+        </Card>
+        <Card>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+          consectetur, erat in efficitur facilisis, enim ligula facilisis enim,
+          nec tincidunt enim erat in enim. Sed consectetur, erat in efficitur
+          facilisis, enim ligula facilisis enim, nec tincidunt enim erat in
+          enim.
+        </Card>
+        <Card>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+          consectetur, erat in efficitur facilisis, enim ligula facilisis enim,
+          nec tincidunt enim erat in enim. Sed consectetur, erat in efficitur
+          facilisis, enim ligula facilisis enim, nec tincidunt enim erat in
+          enim.
+        </Card>
+        <Card>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+          consectetur, erat in efficitur facilisis, enim ligula facilisis enim,
+          nec tincidunt enim erat in enim. Sed consectetur, erat in efficitur
+          facilisis, enim ligula facilisis enim, nec tincidunt enim erat in
+          enim.
+        </Card>
+      </div>
       <div className="inline-block w-full min-h-[80vh]"></div>
     </main>
   );

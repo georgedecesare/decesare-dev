@@ -9,6 +9,7 @@ let navbarIn = false;
 export default function scrollTrigger() {
   gsap.registerPlugin(ScrollTrigger, Flip);
 
+  // Section animations
   getSectionAnimations().forEach((cf) => {
     ScrollTrigger.create({
       trigger: cf.section,
@@ -18,7 +19,26 @@ export default function scrollTrigger() {
     });
   });
 
+  gsap.set('.projects', {
+    x: window.innerWidth,
+    autoAlpha: 1,
+  });
+
   trigger = nameNavbar(); // initialise
+
+  // Project cards
+  gsap.to('.projects', {
+    x: -document.querySelector('.projects')!.clientWidth,
+    ease: 'none', // <-- IMPORTANT!
+    scrollTrigger: {
+      trigger: '.projects div',
+      start: 'bottom 90%',
+      pin: '.main',
+      scrub: 0.1,
+      //snap: directionalSnap(1 / (sections.length - 1)),
+      end: `+=${document.querySelector('.projects')!.clientWidth}`,
+    },
+  });
 }
 
 const recomputeScrollAnimation = () => {

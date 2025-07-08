@@ -47,7 +47,7 @@ export default function RootLayout({
           ${terminal.variable} antialiased`}
       >
         <Nav />
-        {children}
+        <div className="smooth-content">{children}</div>
       </body>
     </html>
   );
