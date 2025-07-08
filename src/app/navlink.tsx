@@ -58,13 +58,12 @@ export default function Navlink({ children }: { children?: React.ReactNode }) {
   return (
     <div
       ref={containerRef}
-      className="cursor-pointer text-2xl font-bold font-terminal
-        whitespace-nowrap relative"
+      className="text-2xl font-bold font-terminal whitespace-nowrap relative"
     >
       <div
         onClick={toggleVisibility}
-        className="p-3 pl-5 flex flex-row items-center relative z-50 bg-nav
-          rounded-xs"
+        className="cursor-pointer p-3 pl-5 flex flex-row items-center relative
+          z-50 rounded-xs"
       >
         {children}
         <span className="material-symbols-outlined text-3xl ml-2 select-none">
@@ -74,7 +73,8 @@ export default function Navlink({ children }: { children?: React.ReactNode }) {
       <div
         ref={menuRef}
         className="absolute mt-[-3] top-full left-0 right-0 z-40 bg-nav px-5
-          hidden rounded-xs"
+          hidden rounded-xs border-l border-r border-b border-stone-700 text-xl
+          pb-2"
       >
         Menu item
         <br />
