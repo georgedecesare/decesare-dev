@@ -13,67 +13,79 @@ import { useEffect } from 'react';
 import Link from 'next/link';
 import Card from './card';
 import matterScript from './_script/matter';
+import { useIsMobile } from './_script/hooks';
 
 export default function Home() {
   const gradient =
     'bg-gradient-to-r bg-clip-text text-transparent from-blue-600 via-purple-600 to-pink-600';
 
+  const isMobile = useIsMobile();
+
   useGSAP(() => {
-    setup();
-    smoothScroll();
-    scrollTrigger();
-    animateText();
-  });
-  useEffect(() => {
-    window.addEventListener('resize', recomputeScrollAnimation);
-    return () => {
-      window.removeEventListener('resize', recomputeScrollAnimation);
+    const animations = () => {
+      if (!isMobile) {
+        setup();
+        smoothScroll();
+        scrollTrigger();
+        animateText();
+        matterScript();
+      }
     };
-  });
+    document.fonts.ready.then(animations);
+  }, [isMobile]);
+
   useEffect(() => {
-    matterScript();
-  });
+    if (!isMobile) {
+      window.addEventListener('resize', recomputeScrollAnimation);
+      return () => {
+        window.removeEventListener('resize', recomputeScrollAnimation);
+      };
+    }
+  }, [isMobile]);
+
   return (
     <main
       className="flex min-h-full flex-col items-center justify-center py-24
         relative main"
     >
-      <div id="hero-logo" className="mt-[20vh] text-6xl">
-        <div id="name-logo" className="text-inherit animate-popup opacity-0">
-          <h1
-            className="text-inherit font-bold font-mono flex flex-row
-              items-center justify-center pt-2 visible!"
-          >
-            <div className={`animate-langle ${gradient} pb-2`}>&lt;</div>
-            <div className="animate-name">George Decesare</div>
-            <div className={`animate-rangle ${gradient} pb-2`}>/&gt;</div>
-          </h1>
+      <header className="hidden md:block">
+        <div id="hero-logo" className="mt-[20vh] text-6xl">
+          <div id="name-logo" className="text-inherit animate-popup opacity-0">
+            <h1
+              className="text-inherit font-bold font-mono flex flex-row
+                items-center justify-center pt-2 visible!"
+            >
+              <div className={`animate-langle ${gradient} pb-2`}>&lt;</div>
+              <div className="animate-name">George Decesare</div>
+              <div className={`animate-rangle ${gradient} pb-2`}>/&gt;</div>
+            </h1>
+          </div>
         </div>
-      </div>
-      <div id="footer">
-        <footer
-          className="mt-4 text-center font-terminal text-3xl font-bold
-            footer-typewriter opacity-0"
-        >
-          Computing student at Imperial College London
-        </footer>
-        <div className="mt-4 flex flex-col items-center justify-center">
-          <span
-            className="material-symbols-rounded select-none text-gray-700
-              opacity-0 more-icon"
-            style={{
-              fontSize: '3rem',
-              fontFamily: "'Material Symbols Rounded'",
-              fontWeight: 400,
-              fontVariationSettings:
-                "'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48",
-            }}
+        <div id="footer">
+          <footer
+            className="mt-4 text-center font-terminal text-3xl font-bold
+              footer-typewriter opacity-0"
           >
-            expand_more
-          </span>
+            Computing student at Imperial College London
+          </footer>
+          <div className="mt-4 flex flex-col items-center justify-center">
+            <span
+              className="material-symbols-rounded select-none text-gray-700
+                opacity-0 more-icon"
+              style={{
+                fontSize: '3rem',
+                fontFamily: "'Material Symbols Rounded'",
+                fontWeight: 400,
+                fontVariationSettings:
+                  "'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48",
+              }}
+            >
+              expand_more
+            </span>
+          </div>
         </div>
-      </div>
-      <div className="inline-block min-w-full min-h-[200px]"></div>
+        <div className="inline-block min-w-full min-h-[200px]"></div>
+      </header>
       <Section title="About Me">
         Hi &mdash; I&apos;m George. I study{' '}
         <Link
@@ -93,19 +105,24 @@ export default function Home() {
         walk/hike. Also <code>vim &gt; emacs</code>.
         <br />
       </Section>
-      <div className="relative mr-auto mt-50 aspect-square">
-        <div className="relative h-min">
-          <div className="matter absolute left-0 top-0 h-full box-content"></div>
+      <div className="relative mr-auto mt-10 md:mt-50 md:aspect-square">
+        <div className="relative h-min max-w-full">
+          <div className="matter absolute left-0 top-0 h-full hidden md:block"></div>
           <div
-            className="inline-block w-20 absolute left-0 top-0 h-full
-              box-content [text-orientation:upright] [writing-mode:vertical-lr]
-              font-terminal text-5xl font-black text-white ml-[50vw]"
+            className="md:inline-block md:w-20 md:absolute md:left-0 md:top-0
+              h-full font-terminal text-5xl font-black text-white md:ml-[50vw]"
           >
-            <h1 className="projects-title">PROJECTS</h1>
+            <h1
+              className="text-center md:text-current projects-title capitalize
+                md:[text-orientation:upright] md:[writing-mode:vertical-lr]"
+            >
+              Projects
+            </h1>
           </div>
           <div
-            className="flex flex-row gap-10 pl-30 projects items-start
-              justify-start w-min"
+            className="flex flex-col mt-5 md:mt-0 md:flex-row gap-10 md:pl-30
+              projects items-center md:items-start md:justify-start w-screen
+              md:w-min"
           >
             <Card>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
