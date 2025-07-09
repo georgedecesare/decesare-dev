@@ -34,19 +34,11 @@ export default function scrollTrigger() {
       trigger: '.projects div',
       start: 'bottom 90%',
       pin: '.main',
-      scrub: 0.3,
+      scrub: 1.5,
       //snap: directionalSnap(1 / (sections.length - 1)),
-      end: `+=${document.querySelector('.projects')!.clientWidth * 4}`,
+      end: `+=${document.querySelector('.projects')!.clientWidth * 2}`,
     },
-  });
-
-  // Physics
-  ScrollTrigger.create({
-    trigger: document.querySelector('.matter')!,
-    start: 'top 30%',
-    onEnter: () => {
-      startPhysics();
-    },
+    onStart: startPhysics,
   });
 }
 

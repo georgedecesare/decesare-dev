@@ -104,7 +104,7 @@ export default function Home() {
             <h1 className="projects-title">PROJECTS</h1>
           </div>
           <div
-            className="flex flex-row gap-10 pl-10 projects items-start
+            className="flex flex-row gap-10 pl-30 projects items-start
               justify-start w-min"
           >
             <Card>

@@ -23,7 +23,7 @@ export default function matterScript() {
     document.querySelector('.matter') as HTMLElement
   ).getBoundingClientRect();
   const x = cardRect.left - matterRect.left;
-  const wallWidth = 20;
+  const wallWidth = 200;
   const wall = Bodies.rectangle(
     x + wallWidth / 2,
     height / 2,
@@ -46,9 +46,6 @@ export default function matterScript() {
   //     background: 'transparent',
   //   },
   // });
-
-  // create two boxes and a ground
-  const ground = Bodies.rectangle(400, height, 810, 60, { isStatic: true });
 
   const splitText = new SplitText('.projects-title', {
     type: 'chars',
@@ -91,7 +88,7 @@ export default function matterScript() {
     };
   });
 
-  // add all of the bodies to the world
+  const ground = Bodies.rectangle(400, height, 2000, 60, { isStatic: true });
   Composite.add(engine.world, ground);
 
   // run the renderer (for debug)
@@ -100,14 +97,16 @@ export default function matterScript() {
   // run the engine
   //Runner.run(runner, engine);
 
-  Matter.Events.on(engine, 'beforeUpdate', () => {
+  const rerender = () => {
     const newX =
       card.getBoundingClientRect().left - matterRect.left + wallWidth / 2;
     Matter.Body.setPosition(wall, { x: newX, y: wall.position.y });
     objs.forEach((obj) => {
       obj.render();
     });
-  });
+  };
+
+  Matter.Events.on(engine, 'beforeUpdate', rerender);
 
   gsap.from(splitText.chars, {
     autoAlpha: 0,
