@@ -2,6 +2,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Flip } from 'gsap/Flip';
 import gsap from 'gsap';
 import { getSectionAnimations } from './draw_svg';
+import { startPhysics } from './matter';
 
 let trigger: ScrollTrigger | undefined;
 let navbarIn = false;
@@ -33,9 +34,18 @@ export default function scrollTrigger() {
       trigger: '.projects div',
       start: 'bottom 90%',
       pin: '.main',
-      scrub: 0.1,
+      scrub: 0.3,
       //snap: directionalSnap(1 / (sections.length - 1)),
-      end: `+=${document.querySelector('.projects')!.clientWidth}`,
+      end: `+=${document.querySelector('.projects')!.clientWidth * 4}`,
+    },
+  });
+
+  // Physics
+  ScrollTrigger.create({
+    trigger: document.querySelector('.matter')!,
+    start: 'top 30%',
+    onEnter: () => {
+      startPhysics();
     },
   });
 }
