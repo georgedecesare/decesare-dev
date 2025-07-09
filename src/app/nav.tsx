@@ -11,7 +11,15 @@ export default function Nav() {
         className="flex-1 flex flex-row gap-10 h-15 items-center font-terminal
           rounded-xs bg-nav shadow-lg border-1 border-stone-700 md:invisible"
       >
-        <div id="logo" className="ml-10 text-xl"></div>
+        <div id="logo" className="md:ml-10 text-xl">
+          <h1
+            className="md:hidden ml-5 font-mono bg-gradient-to-r bg-clip-text
+              text-transparent from-blue-600 via-purple-600 to-pink-600
+              font-bold text-md"
+          >
+            {'<George Decesare />'}
+          </h1>
+        </div>
         <div id="navlinks" className="flex-row gap-10 hidden md:flex">
           <Navlink title="About">
             CV/Resumé
