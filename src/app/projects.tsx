@@ -7,7 +7,7 @@ export default function Projects() {
         <div className="matter absolute left-0 top-0 h-full hidden md:block"></div>
         <div
           className="md:inline-block md:w-20 md:absolute md:left-0 md:top-0
-            h-full font-terminal text-5xl font-black text-white md:ml-[50vw]"
+            h-full font-terminal text-5xl font-black text-white md:ml-[30vw]"
         >
           <h1
             className="text-center md:text-current projects-title capitalize
