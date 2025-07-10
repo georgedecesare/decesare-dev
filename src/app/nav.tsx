@@ -38,7 +38,7 @@ export default function Nav() {
             <Link href="mailto:george@decesare.dev">Email</Link>
           </Navlink>
         </div>
-        <Menu className="absolute right-10" />
+        <Menu className="absolute md:hidden right-10" />
       </div>
     </header>
   );
