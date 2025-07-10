@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
+import { ChevronDown } from 'lucide-react';
 
 export default function Navlink({
   children,
@@ -68,13 +69,11 @@ export default function Navlink({
     >
       <div
         onClick={toggleVisibility}
-        className="cursor-pointer p-3 pl-5 flex flex-row items-center relative
-          z-50 rounded-xs"
+        className="cursor-pointer pl-5 flex flex-row items-end relative z-50
+          rounded-xs gap-2"
       >
-        {title}
-        <span className="material-symbols-outlined text-3xl ml-2 select-none">
-          arrow_drop_down
-        </span>
+        <h1>{title}</h1>
+        <ChevronDown className="h-5 w-5 mb-1" />
       </div>
       <div
         ref={menuRef}

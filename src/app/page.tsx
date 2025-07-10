@@ -1,7 +1,6 @@
 'use client';
 
 import { useGSAP } from '@gsap/react';
-import 'material-symbols';
 import animateText from '@/app/_script/text_animations';
 import smoothScroll from '@/app/_script/smooth_scroll';
 import scrollTrigger, {

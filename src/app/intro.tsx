@@ -1,3 +1,5 @@
+import { ChevronsDownIcon } from 'lucide-react';
+
 export default function Intro() {
   const gradient =
     'bg-gradient-to-r bg-clip-text text-transparent from-blue-600 via-purple-600 to-pink-600';
@@ -23,19 +25,9 @@ export default function Intro() {
           Computing student at Imperial College London
         </footer>
         <div className="mt-4 flex flex-col items-center justify-center">
-          <span
-            className="material-symbols-rounded select-none text-gray-700
-              opacity-0 more-icon"
-            style={{
-              fontSize: '3rem',
-              fontFamily: "'Material Symbols Rounded'",
-              fontWeight: 400,
-              fontVariationSettings:
-                "'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48",
-            }}
-          >
-            expand_more
-          </span>
+          <ChevronsDownIcon
+            className="text-gray-700 select-none invisible more-icon"
+          />
         </div>
       </div>
       <div className="inline-block min-w-full min-h-[200px]"></div>

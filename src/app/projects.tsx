@@ -21,7 +21,7 @@ export default function Projects() {
             projects items-center md:items-start md:justify-start w-screen
             md:w-min"
         >
-          <Card title="Card Title">
+          <Card title="decesare.dev">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
             consectetur, erat in efficitur facilisis, enim ligula facilisis
             enim, nec tincidunt enim erat in enim. Sed consectetur, erat in
