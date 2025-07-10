@@ -8,10 +8,10 @@ export default function Nav() {
     >
       <div
         id="navbar"
-        className="flex-1 flex flex-row gap-10 h-15 items-center font-terminal
+        className="flex-1 flex flex-row h-15 items-center font-terminal
           rounded-xs bg-nav shadow-lg border-1 border-stone-700 md:invisible"
       >
-        <div id="logo" className="md:ml-10 text-xl">
+        <div id="logo" className="text-xl">
           <h1
             className="md:hidden ml-5 font-mono bg-gradient-to-r bg-clip-text
               text-transparent from-blue-600 via-purple-600 to-pink-600

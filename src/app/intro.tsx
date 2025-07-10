@@ -7,7 +7,7 @@ export default function Intro() {
         <div id="name-logo" className="text-inherit animate-popup opacity-0">
           <h1
             className="text-inherit font-bold font-mono flex flex-row
-              items-center justify-center pt-2 visible!"
+              items-center justify-center pt-2 visible! px-10"
           >
             <div className={`animate-langle ${gradient} pb-2`}>&lt;</div>
             <div className="animate-name">George Decesare</div>
