@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Navlink from './navlink';
+import { Menu } from 'lucide-react';
 
 export default function Nav() {
   return (
@@ -37,6 +38,7 @@ export default function Nav() {
             <Link href="mailto:george@decesare.dev">Email</Link>
           </Navlink>
         </div>
+        <Menu className="absolute right-10" />
       </div>
     </header>
   );
