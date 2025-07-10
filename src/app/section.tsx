@@ -17,8 +17,8 @@ export default function Section({
         <LeftBraceIcon />
       </div>
       <div
-        className="flex flex-col font-terminal text-6xl justify-center
-          md:ml-[-20] lg:text-8xl flex-1/3"
+        className="flex flex-col font-terminal text-5xl font-black
+          justify-center md:ml-[-20] lg:text-8xl flex-1/3"
       >
         <h1 className="text-center md:text-end md:pb-20">{title}</h1>
       </div>
