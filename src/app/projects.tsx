@@ -21,28 +21,28 @@ export default function Projects() {
             projects items-center md:items-start md:justify-start w-screen
             md:w-min"
         >
-          <Card>
+          <Card title="Card Title">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
             consectetur, erat in efficitur facilisis, enim ligula facilisis
             enim, nec tincidunt enim erat in enim. Sed consectetur, erat in
             efficitur facilisis, enim ligula facilisis enim, nec tincidunt enim
             erat in enim.
           </Card>
-          <Card>
+          <Card title="Card Title">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
             consectetur, erat in efficitur facilisis, enim ligula facilisis
             enim, nec tincidunt enim erat in enim. Sed consectetur, erat in
             efficitur facilisis, enim ligula facilisis enim, nec tincidunt enim
             erat in enim.
           </Card>
-          <Card>
+          <Card title="Card Title">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
             consectetur, erat in efficitur facilisis, enim ligula facilisis
             enim, nec tincidunt enim erat in enim. Sed consectetur, erat in
             efficitur facilisis, enim ligula facilisis enim, nec tincidunt enim
             erat in enim.
           </Card>
-          <Card>
+          <Card title="Card Title">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
             consectetur, erat in efficitur facilisis, enim ligula facilisis
             enim, nec tincidunt enim erat in enim. Sed consectetur, erat in
