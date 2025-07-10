@@ -10,7 +10,7 @@ export default function Card({
 }) {
   return (
     <div
-      className="flex flex-col items-center justify-center w-75 max-w-3xl p-10
+      className="flex flex-col items-center justify-between w-75 max-w-3xl p-10
         bg-gray-container rounded-lg shadow-md border-stone-700 border-[1px]
         card gap-5"
     >
