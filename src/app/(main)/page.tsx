@@ -1,8 +1,8 @@
 'use client';
 
 import { useGSAP } from '@gsap/react';
-import animateText from '@/app/_script/text_animations';
-import smoothScroll from '@/app/_script/smooth_scroll';
+import animateText from '@/app/(main)/_script/text_animations';
+import smoothScroll from '@/app/(main)/_script/smooth_scroll';
 import scrollTrigger, {
   recomputeScrollAnimation,
 } from './_script/scroll_trigger';
