@@ -14,9 +14,9 @@ export default function TutorPage() {
             <Image
               src="/me.jpg"
               alt="George Decesare"
-              width={100}
-              height={100}
-              className="object-cover w-full h-full"
+              width={1024}
+              height={1395}
+              className="object-cover pt-7"
             />
           </div>
           <div>
