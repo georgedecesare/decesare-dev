@@ -8,7 +8,7 @@ export default function TutorPage() {
       <div className="mx-[20vw] flex flex-col gap-5 items-center">
         <div className="flex flex-row items-center justify-center gap-10 mt-7">
           <div
-            className="aspect-square w-40 rounded-full overflow-hidden
+            className="aspect-square w-50 rounded-full overflow-hidden
               bg-gray-200 flex items-center justify-center"
           >
             <Image
@@ -20,17 +20,17 @@ export default function TutorPage() {
             />
           </div>
           <div>
-            <h1 className="font-extrabold text-5xl">George Decesare</h1>
-            <h2 className="font-semibold mt-3">
+            <h1 className="font-extrabold text-3xl">George Decesare</h1>
+            <h2 className="font-semibold mt-3 text-sm">
               Maths and Computer Science Tutor
             </h2>
-            <span className="flex flex-row items-center gap-1 mt-2 text-sm">
+            <span className="flex flex-row items-center gap-1 mt-2 text-xs">
               <MapPin size={16} strokeWidth={0.75} />
               <p className="font-light"> London (in person), Remote</p>
             </span>
           </div>
         </div>
-        <p className="italic">
+        <p className="italic text-sm font-light">
           Boost exam confidence, deepen understanding, and master the mark
           scheme.
           <br />
@@ -49,9 +49,12 @@ export default function TutorPage() {
           </Link>
         </div>
       </div>
-      <div className="mx-[15vw] mt-10 grid grid-cols-1 lg:grid-cols-2 gap-20">
+      <div
+        className="mx-[15vw] mt-10 grid grid-cols-1 lg:grid-cols-2 gap-20
+          text-sm font-light"
+      >
         <div>
-          <h1 className="text-2xl font-bold">About Me</h1>
+          <h1 className="text-lg font-semibold">About Me</h1>
           <p>
             I&apos;m a third year undergraduate student reading Computing at{' '}
             <strong>Imperial College London</strong>, recently ranked
@@ -77,8 +80,8 @@ export default function TutorPage() {
             </li>
           </ul>
         </div>
-        <div>
-          <h1 className="text-2xl font-bold">My Approach</h1>
+        <div className="text-sm font-light">
+          <h1 className="text-lg font-semibold">My Approach</h1>
           <p>
             There is a popular myth that mathematical proficiency is a talent
             that cannot be learnt but this is{' '}
@@ -103,9 +106,12 @@ export default function TutorPage() {
           Let&apos;s chat further about how I can help
         </Link>
       </p>
-      <div className="mx-[15vw] mt-10 grid grid-cols-1 lg:grid-cols-2 gap-20">
+      <div
+        className="mx-[15vw] mt-10 grid grid-cols-1 lg:grid-cols-2 gap-20
+          text-sm font-light"
+      >
         <div>
-          <h1 className="text-2xl font-bold mt-10">Subjects</h1>
+          <h1 className="text-lg font-semibold mt-10">Subjects</h1>
           <p>I offer the following subjects for tutoring for any exam board:</p>
           <ol className="ml-10 list-disc">
             <li>GCSE Maths</li>
@@ -120,7 +126,7 @@ export default function TutorPage() {
           </ol>
         </div>
         <div>
-          <h1 className="text-2xl font-bold mt-10">Rate</h1>
+          <h1 className="text-lg font-semibold mt-10">Rate</h1>
           <p>I offer a competitive rate of</p>
           <ul className="list-disc ml-10">
             <li>
@@ -134,7 +140,7 @@ export default function TutorPage() {
             There is of course an initial <strong>complementary session</strong>{' '}
             which allows both of us to see if we are a good fit.
           </p>
-          <h1 className="text-2xl font-bold mt-10">Contact Me</h1>
+          <h1 className="text-lg font-semiboldmt-10">Contact Me</h1>
           <p>
             If you have any questions I&apos;m happy to answer them via{' '}
             <Link
