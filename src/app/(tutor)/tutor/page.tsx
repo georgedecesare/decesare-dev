@@ -37,7 +37,7 @@ export default function TutorPage() {
             </div>
           </div>
         </div>
-        <div className="md:hidden">
+        <div className="md:hidden mt-[-10] mb-5">
           <h2 className="font-semibold mt-3 text-sm">
             Maths and Computer Science Tutor
           </h2>
@@ -56,11 +56,12 @@ export default function TutorPage() {
           in GCSE and A Level Maths and Computer Science with someone who knows
           what it&apos;s like to be on the other side of the whiteboard.
         </p>
-        <div
-          className="bg-blue-800 py-3 px-7 rounded-sm text-sm font-bold
-            cursor-pointer"
-        >
-          <Link href="mailto:tutor@decesare.dev?subject=Tutoring%20Enquiry">
+        <div className="bg-darkerblue py-3 px-7 text-sm font-bold
+          cursor-pointer">
+          <Link
+            className="font-modern uppercase"
+            href="mailto:tutor@decesare.dev?subject=Tutoring%20Enquiry"
+          >
             Contact me for a free first session
           </Link>
         </div>
