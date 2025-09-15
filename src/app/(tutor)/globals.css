@@ -11,11 +11,13 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-mono);
   --font-serif: var(--font-serif);
+  --font-modern: var(--font-modern);
+  --color-darkblue: #1d1967;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #1d1d1d;
+    --background: #ffffff;
     --foreground: #ededed;
   }
 }
@@ -24,4 +26,8 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-serif), Arial, Helvetica, sans-serif;
+}
+
+strong {
+  font-weight: 600;
 }

@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Geist, Geist_Mono, Roboto_Serif } from 'next/font/google';
 import './globals.css';
+import localFont from 'next/font/local';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -18,9 +19,15 @@ const serif = Roboto_Serif({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
 });
 
+const modern = localFont({
+  src: './fonts/aspergit.bold.otf',
+  variable: '--font-modern',
+});
+
 export const metadata: Metadata = {
   title: 'George Decesare',
-  description: 'Personal website and portfolio of George Decesare',
+  description:
+    'London-based tutoring for advanced Mathematics and Computer Science by George Decesare',
 };
 
 export const viewport: Viewport = {
@@ -36,7 +43,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${serif.variable} ${geistSans.variable}
+        className={`${serif.variable} ${geistSans.variable} ${modern.variable}
           ${geistMono.variable} antialiased`}
       >
         {children}
