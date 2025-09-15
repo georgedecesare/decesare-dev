@@ -23,9 +23,7 @@ export default function TutorPage() {
             />
           </div>
           <div>
-            <h1 className="font-extrabold text-3xl font-modern">
-              George Decesare
-            </h1>
+            <h1 className="font-bold text-3xl font-modern">George Decesare</h1>
             <div className="hidden md:block">
               <h2 className="font-semibold mt-3 text-sm">
                 Maths and Computer Science Tutor
@@ -68,7 +66,7 @@ export default function TutorPage() {
       </div>
       <div
         className="text-sm font-normal text-darkblue [&_h1]:font-modern
-          [&_h1]:text-lg [&_h1]:font-semibold [&_h1]:mt-5"
+          [&_h1]:text-lg [&_h1]:font-semibold [&_h1]:mt-5 [&_h1]:uppercase"
       >
         <div
           className="w-full px-10 md:px-[15vw] mt-10 grid grid-cols-1
