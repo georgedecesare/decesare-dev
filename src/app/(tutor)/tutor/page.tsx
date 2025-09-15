@@ -11,7 +11,7 @@ export default function TutorPage() {
       >
         <div className="flex flex-row items-center justify-center gap-10 mt-7">
           <div
-            className="aspect-square w-full max-w-40 rounded-full
+            className="aspect-square w-full max-w-25 md:max-w-40 rounded-full
               overflow-hidden bg-gray-200 flex items-center justify-center"
           >
             <Image
@@ -66,7 +66,7 @@ export default function TutorPage() {
         </div>
       </div>
       <div
-        className="text-sm font-light text-darkblue [&_h1]:font-modern
+        className="text-sm font-normal text-darkblue [&_h1]:font-modern
           [&_h1]:text-lg [&_h1]:font-semibold [&_h1]:mt-5"
       >
         <div
@@ -128,7 +128,7 @@ export default function TutorPage() {
         </p>
         <div
           className="mx-10 md:mx-[15vw] grid grid-cols-1 lg:grid-cols-2
-            md:gap-20 text-sm font-light"
+            md:gap-20"
         >
           <div>
             <h1>Subjects</h1>
