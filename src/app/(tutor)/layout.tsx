@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Geist, Geist_Mono, Montserrat, Roboto_Serif } from 'next/font/google';
 import './globals.css';
+import Script from 'next/script';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -42,6 +43,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Script
+        defer
+        src="https://cloud.umami.is/script.js"
+        data-website-id="6d09a870-9048-4988-ac19-b123ca29e0d1"
+      ></Script>
       <body
         className={`${serif.variable} ${geistSans.variable} ${modern.variable}
           ${geistMono.variable} antialiased`}
