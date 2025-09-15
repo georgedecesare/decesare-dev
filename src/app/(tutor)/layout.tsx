@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Geist, Geist_Mono, Roboto_Serif } from 'next/font/google';
+import { Geist, Geist_Mono, Montserrat, Roboto_Serif } from 'next/font/google';
 import './globals.css';
 import localFont from 'next/font/local';
 
@@ -19,9 +19,10 @@ const serif = Roboto_Serif({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
 });
 
-const modern = localFont({
-  src: './fonts/aspergit.bold.otf',
+const modern = Montserrat({
   variable: '--font-modern',
+  subsets: ['latin'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
 });
 
 export const metadata: Metadata = {

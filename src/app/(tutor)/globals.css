@@ -13,6 +13,7 @@
   --font-serif: var(--font-serif);
   --font-modern: var(--font-modern);
   --color-darkblue: #1d1967;
+  --color-darkerblue: #100e37;
 }
 
 @media (prefers-color-scheme: dark) {
