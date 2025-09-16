@@ -35,9 +35,7 @@ export const metadata: Metadata = {
       'London-based tutoring for advanced Mathematics and Computer Science by George Decesare',
     url: 'tutor.decesare.dev',
     siteName: 'George Decesare',
-    images: [
-      'https://thumbs.dreamstime.com/b/derivation-advanced-mathematical-formula-17750197.jpg',
-    ],
+    images: ['https://decesare.dev/hero.jpg'],
     type: 'profile',
   },
   facebook: {
