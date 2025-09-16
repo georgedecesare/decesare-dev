@@ -26,9 +26,20 @@ const modern = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: 'George Decesare',
+  title: 'George Decesare | Maths & Computing Tutor',
   description:
     'London-based tutoring for advanced Mathematics and Computer Science by George Decesare',
+  openGraph: {
+    title: 'George Decesare | Maths & Computing Tutor',
+    description:
+      'London-based tutoring for advanced Mathematics and Computer Science by George Decesare',
+    url: 'tutor.decesare.dev',
+    siteName: 'George Decesare',
+    images: [
+      'https://thumbs.dreamstime.com/b/derivation-advanced-mathematical-formula-17750197.jpg',
+    ],
+    type: 'profile',
+  },
 };
 
 export const viewport: Viewport = {
