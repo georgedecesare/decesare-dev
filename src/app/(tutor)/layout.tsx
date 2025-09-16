@@ -40,6 +40,9 @@ export const metadata: Metadata = {
     ],
     type: 'profile',
   },
+  facebook: {
+    appId: '681319738307479',
+  },
 };
 
 export const viewport: Viewport = {
