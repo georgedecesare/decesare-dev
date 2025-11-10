@@ -4,8 +4,8 @@ export default function Intro() {
   const gradient =
     'bg-gradient-to-r bg-clip-text text-transparent from-blue-600 via-purple-600 to-pink-600';
   return (
-    <header className="hidden md:block">
-      <div id="hero-logo" className="mt-[20vh] text-6xl">
+    <header>
+      <div id="hero-logo" className="md:mt-[20vh] text-2xl md:text-6xl">
         <div id="name-logo" className="text-inherit animate-popup opacity-0">
           <h1
             className="text-inherit font-bold font-mono flex flex-row
@@ -19,8 +19,8 @@ export default function Intro() {
       </div>
       <div id="footer">
         <footer
-          className="mt-4 text-center font-terminal text-3xl font-bold
-            footer-typewriter opacity-0"
+          className="text-xl mt-4 text-center font-terminal md:text-3xl
+            font-bold footer-typewriter opacity-0"
         >
           Computing student at Imperial College London
         </footer>
@@ -30,7 +30,7 @@ export default function Intro() {
           />
         </div>
       </div>
-      <div className="inline-block min-w-full min-h-[200px]"></div>
+      <div className="inline-block min-w-full min-h-[100px] md:min-h-[200px]"></div>
     </header>
   );
 }

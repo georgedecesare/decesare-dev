@@ -25,6 +25,7 @@
 
 html {
   scrollbar-gutter: stable;
+  overflow-x: hidden;
 }
 
 body {
@@ -32,6 +33,10 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-mono), Arial, Helvetica, sans-serif;
+  overscroll-behavior: none;
+  overscroll-behavior-block: none;
+  overscroll-behavior-inline: none;
+  overflow-x: hidden;
 }
 
 /* Ensure scrollbar gutter is stable for all scrollable elements */

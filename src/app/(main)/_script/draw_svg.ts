@@ -7,7 +7,7 @@ interface SectionAnimation {
   animation: gsap.core.Timeline;
 }
 
-function getSectionAnimations() {
+function getSectionAnimations(isMobile: boolean): SectionAnimation[] {
   gsap.registerPlugin(DrawSVGPlugin, SplitText);
   // Get all sections
   const sections = document.querySelectorAll('section');
@@ -40,12 +40,12 @@ function getSectionAnimations() {
       animation.from(
         titleSplit.chars,
         {
-          delay: 0.2,
+          delay: isMobile ? 0 : 0.2,
           y: 15,
           x: -10,
           autoAlpha: 0,
-          duration: 0.5,
-          stagger: 0.2,
+          duration: isMobile ? 0.3 : 0.5,
+          stagger: isMobile ? 0.1 : 0.2,
           ease: 'power1.out',
           onComplete: () => {
             titleSplit.revert();
@@ -62,10 +62,10 @@ function getSectionAnimations() {
       animation.from(
         contentLines.lines,
         {
-          delay: 1,
+          delay: isMobile ? 0 : 1,
           y: 50,
           opacity: 0,
-          duration: 1,
+          duration: isMobile ? 0.7 : 1,
           stagger: 0.1,
           ease: 'power1.out',
           onComplete: () => {

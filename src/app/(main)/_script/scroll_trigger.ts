@@ -6,42 +6,43 @@ import { startPhysics } from './matter';
 
 let navbarIn = false;
 
-export default function scrollTrigger() {
+export default function scrollTrigger(isMobile: boolean) {
   gsap.registerPlugin(ScrollTrigger, Flip);
 
   // Section animations
-  getSectionAnimations().forEach((cf) => {
+  getSectionAnimations(isMobile).forEach((cf) => {
     ScrollTrigger.create({
       trigger: cf.section,
-      start: 'top 40%',
+      start: isMobile ? 'top 40%' : 'top 40%',
       scrub: false,
       animation: cf.animation,
     });
   });
 
   // Project cards
-  gsap.set('.projects', {
-    x: document.body.clientWidth,
-    autoAlpha: 1,
-  });
-  gsap.to('.projects', {
-    x: -document.querySelector('.projects')!.clientWidth,
-    ease: 'none', // <-- IMPORTANT!
-    scrollTrigger: {
-      trigger: '.projects div',
-      start: 'bottom 90%',
-      pin: '.main',
-      scrub: 1.5,
-      //snap: directionalSnap(1 / (sections.length - 1)),
-      end: `+=${document.querySelector('.projects')!.clientWidth * 2}`,
-    },
-    onStart: startPhysics,
-  });
-
-  nameNavbar();
+  if (!isMobile) {
+    gsap.set('.projects', {
+      x: document.body.clientWidth,
+      autoAlpha: 1,
+    });
+    gsap.to('.projects', {
+      x: -document.querySelector('.projects')!.clientWidth,
+      ease: 'none', // <-- IMPORTANT!
+      scrollTrigger: {
+        trigger: '.projects div',
+        start: 'bottom 90%',
+        pin: '.main',
+        scrub: 1.5,
+        //snap: directionalSnap(1 / (sections.length - 1)),
+        end: `+=${document.querySelector('.projects')!.clientWidth * 2}`,
+      },
+      onStart: startPhysics,
+    });
+    navbar();
+  }
 }
 
-function nameNavbar() {
+function navbar() {
   const footer = document.getElementById('footer')!;
   const navbar = document.getElementById('navbar')!;
 
