@@ -12,7 +12,8 @@ import About from './about';
 import Projects from './projects';
 
 export default function Home() {
-  const isMobile = useIsMobile();
+  const isMobile =
+    useIsMobile() || !window.matchMedia('(min-width: 768px)').matches;
 
   useGSAP(() => {
     const animations = () => {
@@ -29,8 +30,8 @@ export default function Home() {
 
   return (
     <main
-      className="flex min-h-full flex-col items-center justify-center py-24
-        relative main"
+      className="flex min-h-full flex-col items-center justify-center py-10
+        relative main px-1 max-w-[1100px] mx-auto box-border"
     >
       <Intro />
 

@@ -1,5 +1,11 @@
 import type { Metadata, Viewport } from 'next';
-import { Geist, Geist_Mono, IBM_Plex_Mono, VT323 } from 'next/font/google';
+import {
+  Fira_Mono,
+  Geist,
+  Geist_Mono,
+  IBM_Plex_Mono,
+  VT323,
+} from 'next/font/google';
 import './globals.css';
 import Nav from './nav';
 
@@ -13,12 +19,19 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 });
 
-const mono = IBM_Plex_Mono({
+const mono = Fira_Mono({
   variable: '--font-mono',
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '500', '700'],
   display: 'swap',
 });
+
+// const mono = IBM_Plex_Mono({
+//   variable: '--font-mono',
+//   subsets: ['latin'],
+//   weight: ['400', '500', '600', '700'],
+//   display: 'swap',
+// });
 
 const terminal = VT323({
   variable: '--font-terminal',

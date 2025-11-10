@@ -54,13 +54,15 @@ function getSectionAnimations() {
         '<'
       );
 
+      // Then the main content body text
+
       const contentLines = SplitText.create(content, {
         type: 'lines',
       });
       animation.from(
         contentLines.lines,
         {
-          delay: 0.2,
+          delay: 1,
           y: 50,
           opacity: 0,
           duration: 1,

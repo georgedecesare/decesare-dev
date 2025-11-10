@@ -10,29 +10,29 @@ export default function Section({
 }: React.PropsWithChildren<SectionProps>) {
   return (
     <section
-      className="px-15 md:px-10 flex flex-col md:flex-row max-w-full
-        xl:max-w-[90%] 2xl:max-w-[70%] md:invisible"
+      className="left-0 right-0 w-screen px-15 md:px-10 max-w-full flex flex-col
+        md:invisible items-center"
     >
-      <div className="h-full py-1 pb-20 hidden md:block">
-        <LeftBraceIcon />
-      </div>
-      <div
-        className="flex flex-col font-terminal text-5xl font-black
-          justify-center md:ml-[-20] lg:text-8xl flex-1/3"
-      >
-        <h1 className="text-center md:text-end md:pb-20">{title}</h1>
-      </div>
-      <div className="flex items-center flex-2/3 3xl:flex-1/3">
-        <p
-          className="mt-5 md:pl-10 font-mono text-sm xl:text-md w-full md:pt-20
-            font-light leading-relaxed"
+      <div className="flex flex-col md:flex-row w-full custom-section">
+        <div className="h-full pb-20 hidden md:block">
+          <LeftBraceIcon />
+        </div>
+        <div
+          className="flex flex-col font-terminal font-black justify-center
+            text-7xl sm:text-8xl w-full pb-5"
         >
-          {children}
-        </p>
+          <h1 className="text-center">{title}</h1>
+        </div>
+        <div className="h-full pt-20 hidden md:block">
+          <RightBraceIcon />
+        </div>
       </div>
-      <div className="h-full py-1 pt-20 hidden md:block">
-        <RightBraceIcon />
-      </div>
+      <p
+        className="font-mono text-lg xl:text-xl w-[70%] md:pt-20 font-light
+          leading-relaxed"
+      >
+        {children}
+      </p>
     </section>
   );
 }
