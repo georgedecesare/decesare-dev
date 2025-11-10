@@ -3,6 +3,7 @@ import { Flip } from 'gsap/Flip';
 import gsap from 'gsap';
 import { getSectionAnimations } from './draw_svg';
 import { startPhysics } from './matter';
+import { SplitText } from 'gsap/SplitText';
 
 let navbarIn = false;
 
@@ -19,8 +20,47 @@ export default function scrollTrigger(isMobile: boolean) {
     });
   });
 
-  // Project cards
-  if (!isMobile) {
+  // Project card
+  if (isMobile) {
+    // Do something else
+    const title = document.querySelector('.projects-title');
+    // Animate in title
+    const titleSplit = SplitText.create(title, {
+      type: 'chars',
+      smartWrap: true,
+    });
+    gsap.from(titleSplit.chars, {
+      delay: isMobile ? 0 : 0.2,
+      y: 15,
+      x: -10,
+      autoAlpha: 0,
+      duration: isMobile ? 0.1 : 0.5,
+      stagger: isMobile ? 0.1 : 0.2,
+      ease: 'power1.out',
+      onComplete: () => {
+        titleSplit.revert();
+      },
+      scrollTrigger: {
+        trigger: '.projects-title',
+        start: 'top 80%',
+      },
+    });
+
+    // Animate each project card when scrolled into view
+    const cards = document.querySelectorAll('.card');
+    cards.forEach((card) => {
+      gsap.from(card, {
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        ease: 'power1.out',
+        scrollTrigger: {
+          trigger: card,
+          start: 'top 90%',
+        },
+      });
+    });
+  } else {
     gsap.set('.projects', {
       x: document.body.clientWidth,
       autoAlpha: 1,

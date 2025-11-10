@@ -4,20 +4,20 @@ import Section from './section';
 export default function About() {
   return (
     <Section title="About Me">
-      Hi &mdash; I&apos;m George. I study{' '}
+      Hey, &mdash; I&apos;m George.
+      <br />
+      I&apos;m an aspiring software engineer and a third-year{' '}
       <Link href="https://www.imperial.ac.uk/computing/" className="font-bold">
         Computing
       </Link>{' '}
-      at Imperial College London. I&apos;m an aspiring software engineer with a
-      love for beautiful code and unique solutions.
+      undergraduate at Imperial, where I&apos;m on track for a first-class
+      honours.
       <br />
-      At the moment I&apos;m enjoying dabbling in full-stack web development
-      &mdash; for example this website. You can read more about it below.
-      <br />I also enjoy the intersection of mathematics with computing,
-      particularly in the fields of machine learning and computer graphics.
-      <br />I also play the violin and piano at grade 8 level, and I love to
-      walk/hike. Also <code>vim &gt; emacs</code>.
-      <br />
+      I&apos;m particularly drawn to the intersection of practical computing and
+      mathematical rigour, especially in areas like compiler desing, language
+      theory, formal semantics, and most recently machine learning.
+      <br />I also enjoy some full-stack web development &mdash; for example
+      this website, which you can read more about below.
     </Section>
   );
 }

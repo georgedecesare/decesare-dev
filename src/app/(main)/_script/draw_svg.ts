@@ -44,7 +44,7 @@ function getSectionAnimations(isMobile: boolean): SectionAnimation[] {
           y: 15,
           x: -10,
           autoAlpha: 0,
-          duration: isMobile ? 0.3 : 0.5,
+          duration: isMobile ? 0.1 : 0.5,
           stagger: isMobile ? 0.1 : 0.2,
           ease: 'power1.out',
           onComplete: () => {
@@ -65,8 +65,8 @@ function getSectionAnimations(isMobile: boolean): SectionAnimation[] {
           delay: isMobile ? 0 : 1,
           y: 50,
           opacity: 0,
-          duration: isMobile ? 0.7 : 1,
-          stagger: 0.1,
+          duration: isMobile ? 0.3 : 1,
+          stagger: isMobile ? 0.05 : 0.1,
           ease: 'power1.out',
           onComplete: () => {
             contentLines.revert();

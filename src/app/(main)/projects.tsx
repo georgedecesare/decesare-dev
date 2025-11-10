@@ -2,7 +2,10 @@ import Card from './card';
 
 export default function Projects() {
   return (
-    <div className="relative mr-auto mt-10 md:mt-50 md:aspect-square">
+    <div
+      className="relative mr-auto mt-10 md:mt-50 md:aspect-square opacity-0
+        project-wrapper"
+    >
       <div className="relative h-min max-w-full">
         <div className="matter absolute left-0 top-0 h-full hidden md:block"></div>
         <div

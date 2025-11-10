@@ -8,4 +8,7 @@ export default function setup() {
   gsap.set('section', {
     autoAlpha: 1,
   });
+  gsap.set('.project-wrapper', {
+    autoAlpha: 1,
+  });
 }
