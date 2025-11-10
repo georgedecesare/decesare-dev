@@ -4,7 +4,6 @@ import gsap from 'gsap';
 import { getSectionAnimations } from './draw_svg';
 import { startPhysics } from './matter';
 
-let trigger: ScrollTrigger | undefined;
 let navbarIn = false;
 
 export default function scrollTrigger() {
@@ -19,8 +18,6 @@ export default function scrollTrigger() {
       animation: cf.animation,
     });
   });
-
-  trigger = nameNavbar(); // initialise
 
   // Project cards
   gsap.set('.projects', {
@@ -40,6 +37,8 @@ export default function scrollTrigger() {
     },
     onStart: startPhysics,
   });
+
+  nameNavbar();
 }
 
 function nameNavbar() {
