@@ -1,11 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import {
-  Fira_Mono,
-  Geist,
-  Geist_Mono,
-  IBM_Plex_Mono,
-  VT323,
-} from 'next/font/google';
+import { Fira_Mono, Geist, Geist_Mono, VT323 } from 'next/font/google';
 import './globals.css';
 import Nav from './nav';
 
