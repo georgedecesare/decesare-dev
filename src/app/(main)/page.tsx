@@ -30,7 +30,7 @@ export default function Home() {
 
   return (
     <main
-      className="flex min-h-full flex-col items-center justify-center py-10
+      className="flex min-h-full flex-col items-center justify-center py-30
         relative main px-1 max-w-[1100px] mx-auto box-border"
     >
       <Intro />

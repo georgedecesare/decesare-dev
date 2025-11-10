@@ -10,7 +10,7 @@ export default function Section({
 }: React.PropsWithChildren<SectionProps>) {
   return (
     <section
-      className="left-0 right-0 w-screen px-15 md:px-10 max-w-full flex flex-col
+      className="left-0 right-0 w-screen md:px-10 max-w-full flex flex-col
         md:invisible items-center"
     >
       <div className="flex flex-col md:flex-row w-full custom-section">
@@ -19,7 +19,7 @@ export default function Section({
         </div>
         <div
           className="flex flex-col font-terminal font-black justify-center
-            text-7xl sm:text-8xl w-full pb-5"
+            text-5xl sm:text-8xl w-full pb-5"
         >
           <h1 className="text-center">{title}</h1>
         </div>
@@ -28,8 +28,8 @@ export default function Section({
         </div>
       </div>
       <p
-        className="font-mono text-lg xl:text-xl w-[70%] md:pt-20 font-light
-          leading-relaxed"
+        className="font-mono text-sm md:text-lg xl:text-xl w-[70%] md:pt-20
+          font-light leading-relaxed"
       >
         {children}
       </p>
