@@ -3,11 +3,8 @@
 import { useGSAP } from '@gsap/react';
 import animateText from '@/app/(main)/_script/text_animations';
 import smoothScroll from '@/app/(main)/_script/smooth_scroll';
-import scrollTrigger, {
-  recomputeScrollAnimation,
-} from './_script/scroll_trigger';
+import scrollTrigger from './_script/scroll_trigger';
 import setup from './_script/setup';
-import { useEffect } from 'react';
 import matterScript from './_script/matter';
 import { useIsMobile } from './_script/hooks';
 import Intro from './intro';
@@ -28,15 +25,6 @@ export default function Home() {
       }
     };
     document.fonts.ready.then(animations);
-  }, [isMobile]);
-
-  useEffect(() => {
-    if (!isMobile) {
-      window.addEventListener('resize', recomputeScrollAnimation);
-      return () => {
-        window.removeEventListener('resize', recomputeScrollAnimation);
-      };
-    }
   }, [isMobile]);
 
   return (
