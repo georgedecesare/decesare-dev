@@ -13,7 +13,7 @@ export default function Nav() {
         <div id="navlinks" className="flex-row gap-10 hidden md:flex">
           <Navlink title="George Decesare" href="/" />
           <Navlink title="About">
-            CV/Resumé
+            <Link href="/files/cv.pdf">CV/Résumé</Link>
             <br />
             About this website
           </Navlink>
