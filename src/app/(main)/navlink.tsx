@@ -3,13 +3,16 @@
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ChevronDown } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Navlink({
   children,
   title,
+  href,
 }: {
   children?: React.ReactNode;
   title: string;
+  href?: string;
 }) {
   const [visible, setVisible] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -58,9 +61,11 @@ export default function Navlink({
     }
   }, [visible]);
 
-  const toggleVisibility = () => {
-    setVisible((prev) => !prev);
-  };
+  const toggleVisibility = children
+    ? () => {
+        setVisible((prev) => !prev);
+      }
+    : () => {};
 
   return (
     <div
@@ -70,10 +75,16 @@ export default function Navlink({
       <div
         onClick={toggleVisibility}
         className="cursor-pointer pl-5 flex flex-row items-end relative z-50
-          rounded-xs gap-2"
+          rounded-xs gap-2 select-none"
       >
-        <h1>{title}</h1>
-        <ChevronDown className="h-5 w-5 mb-1" />
+        {href ? (
+          <Link href={href}>
+            <h1>{title}</h1>
+          </Link>
+        ) : (
+          <h1>{title}</h1>
+        )}
+        {children && <ChevronDown className="h-5 w-5 mb-1" />}
       </div>
       <div
         ref={menuRef}

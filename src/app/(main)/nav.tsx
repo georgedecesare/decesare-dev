@@ -11,6 +11,7 @@ export default function Nav() {
           items-center font-terminal rounded-xs md:invisible"
       >
         <div id="navlinks" className="flex-row gap-10 hidden md:flex">
+          <Navlink title="George Decesare" href="/" />
           <Navlink title="About">
             CV/Resumé
             <br />
