@@ -68,9 +68,6 @@ function getSectionAnimations(isMobile: boolean): SectionAnimation[] {
           duration: isMobile ? 0.3 : 1,
           stagger: isMobile ? 0.05 : 0.1,
           ease: 'power1.out',
-          onComplete: () => {
-            contentLines.revert();
-          },
         },
         '<'
       );
