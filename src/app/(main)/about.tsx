@@ -14,7 +14,7 @@ export default function About() {
       honours.
       <br />
       I&apos;m particularly drawn to the intersection of practical computing and
-      mathematical rigour, especially in areas like compiler desing, language
+      mathematical rigour, especially in areas like compiler design, language
       theory, formal semantics, and most recently machine learning.
       <br />I also enjoy some full-stack web development &mdash; for example
       this website, which you can read more about below.
