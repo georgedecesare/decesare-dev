@@ -11,9 +11,9 @@ export default function Section({
   return (
     <section
       className="left-0 right-0 w-screen md:px-10 max-w-full flex flex-col
-        invisible items-center"
+        invisible items-center mt-50"
     >
-      <div className="flex flex-col md:flex-row w-full custom-section">
+      <div className="flex flex-col md:flex-row w-full custom-section mb-20">
         <div className="h-full pb-20 hidden md:block">
           <LeftBraceIcon />
         </div>
@@ -27,12 +27,7 @@ export default function Section({
           <RightBraceIcon />
         </div>
       </div>
-      <p
-        className="font-mono text-md md:text-lg xl:text-xl w-[70%] md:pt-20
-          font-light"
-      >
-        {children}
-      </p>
+      {children}
     </section>
   );
 }

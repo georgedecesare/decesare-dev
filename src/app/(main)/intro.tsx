@@ -30,7 +30,7 @@ export default function Intro() {
           />
         </div>
       </div>
-      <div className="inline-block min-w-full min-h-[100px] md:min-h-[200px]"></div>
+      <div className="inline-block min-w-full min-h-[50px] md:min-h-[100px]"></div>
     </header>
   );
 }

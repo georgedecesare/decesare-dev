@@ -14,6 +14,14 @@ const compat = new FlatCompat({
 const eslintConfig = [
   ...compat.extends('next/core-web-vitals', 'next/typescript', 'prettier'),
   {
+    ignores: [
+      '**/dist/**',
+      '**/node_modules/**',
+      '**/.next/**',
+      '**/generated/**',
+    ],
+  },
+  {
     plugins: {
       prettier: pluginPrettier,
     },
