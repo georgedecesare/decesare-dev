@@ -28,6 +28,7 @@ jobs:
 
       - name: Build Application
         run: |
+          export DATABASE_URL="postgresql://user:password@localhost:5432/dummy_db"
           npx prisma generate
           npm run build
 
