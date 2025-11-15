@@ -26,14 +26,6 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Build Application
-        run: |
-          export DATABASE_URL="postgresql://user:password@localhost:5432/dummy_db"
-          npx prisma generate
-          npx prisma db seed 
-          npx prisma dev
-          npm run build
-
       - name: Deploy to VM
         uses: appleboy/scp-action@master
         with:
