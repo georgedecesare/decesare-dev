@@ -205,8 +205,8 @@ const IconMap: Record<string, JSX.Element> = {
   Zod: (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="256"
-      height="203"
+      width="50"
+      height="50"
       viewBox="0 0 256 203"
     >
       <defs>
@@ -234,7 +234,6 @@ const IconMap: Record<string, JSX.Element> = {
             values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.36 0"
           ></feColorMatrix>
         </filter>
-        <style>{`svg { width: 50px; height: 50px; }`}</style>
         <path
           id="logosZod1"
           fill="#000"
