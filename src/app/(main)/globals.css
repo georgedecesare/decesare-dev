@@ -16,11 +16,9 @@
   --color-nav: rgb(16, 18, 18);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #080808;
-    --foreground: #d1d1d1;
-  }
+:root {
+  --background: #080808;
+  --foreground: #d1d1d1;
 }
 
 html {
