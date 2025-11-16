@@ -16,7 +16,7 @@ export default async function Projects() {
             h-full font-terminal text-5xl font-black text-white md:ml-[30vw]"
         >
           <h1
-            className="text-center md:text-current projects-title capitalize
+            className="text-center md:text-current projects-title md:capitalize
               md:[text-orientation:upright] md:[writing-mode:vertical-lr]"
           >
             Projects
