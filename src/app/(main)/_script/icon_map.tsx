@@ -21,10 +21,10 @@ import { BookOpenText } from 'lucide-react';
 import { JSX } from 'react';
 
 const IconMap: Record<string, JSX.Element> = {
-  Haskell: <HaskellOriginal size={50} />,
-  JavaScript: <JavascriptOriginal size={50} />,
-  TypeScript: <TypescriptOriginal size={50} />,
-  React: <ReactOriginal size={50} />,
+  Haskell: <HaskellOriginal size={50} width={50} height={50} />,
+  JavaScript: <JavascriptOriginal size={50} width={50} height={50} />,
+  TypeScript: <TypescriptOriginal size={50} width={50} height={50} />,
+  React: <ReactOriginal size={50} width={50} height={50} />,
   Prisma: (
     <svg
       width="50px"
@@ -43,19 +43,19 @@ const IconMap: Record<string, JSX.Element> = {
       </g>
     </svg>
   ),
-  'Node.js': <NodejsOriginal size={50} />,
-  Nuxt: <NuxtOriginal size={50} />,
-  Vue: <VuejsOriginal size={50} />,
-  'Next.js': <NextjsOriginal size={50} />,
-  Flutter: <FlutterOriginal size={50} />,
-  'GitHub Actions': <GithubactionsOriginal size={50} />,
-  'GitLab CI': <GitlabOriginal size={50} />,
-  C: <COriginal size={50} />,
-  Dart: <DartOriginal size={50} />,
-  Docker: <DockerOriginal size={50} />,
-  git: <GitOriginal size={50} />,
-  NeoVim: <NeovimOriginal size={50} />,
-  Scala: <ScalaOriginal size={50} />,
+  'Node.js': <NodejsOriginal size={50} width={50} height={50} />,
+  Nuxt: <NuxtOriginal size={50} width={50} height={50} />,
+  Vue: <VuejsOriginal size={50} width={50} height={50} />,
+  'Next.js': <NextjsOriginal size={50} width={50} height={50} />,
+  Flutter: <FlutterOriginal size={50} width={50} height={50} />,
+  'GitHub Actions': <GithubactionsOriginal size={50} width={50} height={50} />,
+  'GitLab CI': <GitlabOriginal size={50} width={50} height={50} />,
+  C: <COriginal size={50} width={50} height={50} />,
+  Dart: <DartOriginal size={50} width={50} height={50} />,
+  Docker: <DockerOriginal size={50} width={50} height={50} />,
+  git: <GitOriginal size={50} width={50} height={50} />,
+  NeoVim: <NeovimOriginal size={50} width={50} height={50} />,
+  Scala: <ScalaOriginal size={50} width={50} height={50} />,
 };
 
 export default function getIcon(icon: string): JSX.Element {
