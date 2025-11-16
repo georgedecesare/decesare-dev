@@ -20,7 +20,7 @@ export default function SkillsMarquee({ skills }: { skills: Skill[] }) {
   return (
     <>
       {skillSets.map((ss, i) => (
-        <Marquee key={i} pauseOnHover className="mt-50">
+        <Marquee key={i} pauseOnHover className="mt-20 d:mt-50">
           {ss.map((skill, index) => (
             <div
               className="flex flex-col items-center cursor-pointer px-5"

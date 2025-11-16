@@ -6,7 +6,7 @@ export default async function Projects() {
 
   return (
     <div
-      className="relative mr-auto mt-10 md:mt-50 md:aspect-square opacity-0
+      className="relative mr-auto mt-20 md:mt-50 md:aspect-square opacity-0
         project-wrapper"
     >
       <div className="relative h-min max-w-full">
