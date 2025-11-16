@@ -3,6 +3,7 @@ import About from './about';
 import Projects from './projects';
 import Setup from './setup';
 import Skills from './skills';
+import HeroButton from './button';
 
 export default function Home() {
   return (
@@ -13,6 +14,8 @@ export default function Home() {
       <Setup />
 
       <Intro />
+
+      <HeroButton />
 
       <About />
 

@@ -142,13 +142,32 @@ export default function animateText() {
   // ============================================================
   // MORE ICON ANIMATION
   // ============================================================
-  const moreIcon = document.querySelector('.more-icon') as HTMLElement;
 
   // Fade in the more icon
-  tl.to(moreIcon, {
+  tl.to('.more-icon', {
     delay: 0.2,
     duration: 1,
     autoAlpha: 1,
     ease: 'power1.out',
   });
+
+  // ============================================================
+  // Hero Button Animation
+  // ============================================================
+
+  tl.fromTo(
+    '.hero-button',
+    {
+      scale: 0.95,
+      autoAlpha: 0,
+    },
+    {
+      delay: 0,
+      duration: 1.5,
+      scale: 1,
+      autoAlpha: 1,
+      ease: 'ease.out',
+    },
+    '<'
+  );
 }
